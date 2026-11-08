@@ -9,14 +9,23 @@
   // Pevné "náhodné" pořadí okének v mřížce
   var PORADI = [7, 15, 2, 21, 11, 18, 4, 23, 9, 1, 13, 20, 16, 6, 24, 10, 3, 19, 12, 22, 5, 17, 8, 14];
   var DNY = ["NE", "PO", "ÚT", "ST", "ČT", "PÁ", "SO"];
-  var KLIC = "bunker-advent-otevreno";
+  var OSTRE_ADRESY = /(^|\.)github\.io$|(^|\.)bunkertimpo\.cz$/i;
 
-  var nahled = /[?&]nahled=1\b/.test(location.search);
+  // Náhled: ?nahled=1, nebo když stránka neběží na ostré adrese (třeba náhled v Claude)
+  var nahled = /[?&]nahled=1\b/.test(location.search) || !OSTRE_ADRESY.test(location.hostname);
+  var simulace = "vse"; // v náhledu: "vse", "pred", "po" nebo číslo dne
+  var KLIC = nahled ? "bunker-advent-nahled" : "bunker-advent-otevreno";
+
   var okenka = {};
   var otevreno = nactiOtevreno();
 
-  // Dnešní datum podle českého času
+  // ---------- datum ----------
   function dnesPraha() {
+    if (nahled && simulace !== "vse") {
+      if (simulace === "pred") return { rok: ROK, mesic: 11, den: 20 };
+      if (simulace === "po") return { rok: ROK, mesic: 12, den: 27 };
+      return { rok: ROK, mesic: MESIC, den: simulace };
+    }
     var casti = new Intl.DateTimeFormat("en-CA", {
       timeZone: "Europe/Prague", year: "numeric", month: "2-digit", day: "2-digit"
     }).formatToParts(new Date());
@@ -24,24 +33,23 @@
     casti.forEach(function (c) { o[c.type] = parseInt(c.value, 10); });
     return { rok: o.year, mesic: o.month, den: o.day };
   }
-
-  function porovnej(a, b) {
-    return (a.rok - b.rok) || (a.mesic - b.mesic) || (a.den - b.den);
+  function porovnej(a, b) { return (a.rok - b.rok) || (a.mesic - b.mesic) || (a.den - b.den); }
+  function datumOkenka(c) { return { rok: ROK, mesic: MESIC, den: c }; }
+  function jeOdemceno(c) {
+    if (nahled && simulace === "vse") return true;
+    return porovnej(dnesPraha(), datumOkenka(c)) >= 0;
   }
-
-  function jeOdemceno(cislo) {
-    if (nahled) return true;
-    return porovnej(dnesPraha(), { rok: ROK, mesic: MESIC, den: cislo }) >= 0;
+  function jeDnes(c) {
+    if (nahled && simulace === "vse") return false;
+    return porovnej(dnesPraha(), datumOkenka(c)) === 0;
   }
-
-  function jeDnes(cislo) {
-    return porovnej(dnesPraha(), { rok: ROK, mesic: MESIC, den: cislo }) === 0;
+  function predStartem() {
+    if (nahled && simulace === "vse") return false;
+    return porovnej(dnesPraha(), datumOkenka(1)) < 0;
   }
+  function denVTydnu(c) { return DNY[new Date(Date.UTC(ROK, MESIC - 1, c)).getUTCDay()]; }
 
-  function denVTydnu(cislo) {
-    return DNY[new Date(Date.UTC(ROK, MESIC - 1, cislo)).getUTCDay()];
-  }
-
+  // ---------- paměť otevřených ----------
   function nactiOtevreno() {
     try { return JSON.parse(localStorage.getItem(KLIC)) || []; } catch (e) { return []; }
   }
@@ -49,21 +57,20 @@
     try { localStorage.setItem(KLIC, JSON.stringify(otevreno)); } catch (e) { /* nevadí */ }
   }
 
-  // Načtení okenka.md
+  // ---------- okenka.md ----------
   function rozeber(md) {
     var bloky = {};
     var aktualni = null;
     md.replace(/\r/g, "").split("\n").forEach(function (radek) {
       var h = radek.match(/^##\s+(.+?)\s*$/);
       if (h) {
-        var klic = h[1].toLowerCase();
         aktualni = { nadpis: "", foto: "", odkaz: "", zona: "", radky: [] };
-        bloky[klic] = aktualni;
+        bloky[h[1].toLowerCase()] = aktualni;
         return;
       }
       if (!aktualni) return;
       var p = radek.match(/^(nadpis|foto|odkaz|zona):\s*(.*)$/i);
-      if (p && aktualni.radky.length === 0) {
+      if (p && aktualni.radky.join("").trim() === "") {
         aktualni[p[1].toLowerCase()] = p[2].trim();
         return;
       }
@@ -77,14 +84,13 @@
     var odstavec = [];
     var seznam = null;
     function zavriOdstavec() {
-      if (odstavec.length) {
-        var p = document.createElement("p");
-        var text = odstavec.join(" ");
-        p.textContent = text;
-        if (/^tip od davida$/i.test(text)) p.className = "podpis";
-        cil.appendChild(p);
-        odstavec = [];
-      }
+      if (!odstavec.length) return;
+      var p = document.createElement("p");
+      var text = odstavec.join(" ");
+      p.textContent = text;
+      if (/^tip od davida$/i.test(text)) p.className = "podpis";
+      cil.appendChild(p);
+      odstavec = [];
     }
     radky.forEach(function (r) {
       var t = r.trim();
@@ -95,68 +101,93 @@
         li.textContent = t.slice(2);
         seznam.appendChild(li);
       } else if (t === "") {
-        zavriOdstavec();
-        seznam = null;
+        zavriOdstavec(); seznam = null;
       } else {
-        seznam = null;
-        odstavec.push(t);
+        seznam = null; odstavec.push(t);
       }
     });
     zavriOdstavec();
   }
 
-  function bezpecnyOdkaz(url) {
-    return /^(https?:|mailto:|tel:)/i.test(url) ? url : "";
+  function bezpecnyOdkaz(url) { return /^(https?:|mailto:|tel:)/i.test(url) ? url : ""; }
+
+  // ---------- mřížka ----------
+  function el(tag, trida, text) {
+    var e = document.createElement(tag);
+    if (trida) e.className = trida;
+    if (text != null) e.textContent = text;
+    return e;
   }
 
-  // Mřížka
-  function vykresliMrizku() {
+  function vykresliMrizku(animovat) {
     var mrizka = document.getElementById("mrizka");
     mrizka.textContent = "";
-    PORADI.forEach(function (cislo) {
-      var b = document.createElement("button");
-      b.type = "button";
-      b.className = "dvirka";
+    PORADI.forEach(function (cislo, i) {
       var data = okenka[cislo] || {};
+      var b = el("button", "dvirka");
+      b.type = "button";
+      b.dataset.cislo = cislo;
+      b.style.setProperty("--i", animovat ? i : 0);
+      if (!animovat) b.style.animation = "none";
       if (data.zona === "zluta") b.classList.add("dvirka--zluta");
-      var stav = document.createElement("span");
-      stav.className = "dvirka__stav";
-      b.textContent = String(cislo);
+
+      var za = el("span", "dvirka__za");
+      za.appendChild(el("b", null, String(cislo)));
+      za.appendChild(el("span", null, data.nadpis || ""));
+      b.appendChild(za);
+
+      var dvere = el("span", "dvirka__dvere");
+      dvere.appendChild(el("span", "dvirka__cislo", String(cislo)));
+      var stitek = el("span", "dvirka__stitek", "");
+      dvere.appendChild(stitek);
+      b.appendChild(dvere);
+
+      var jeOtevreno = otevreno.indexOf(cislo) !== -1;
       if (!jeOdemceno(cislo)) {
         b.classList.add("dvirka--zamceno");
-        b.setAttribute("aria-label", "Okénko " + cislo + ", zatím zamčené");
-      } else if (jeDnes(cislo) && otevreno.indexOf(cislo) === -1) {
-        b.classList.add("dvirka--dnes");
-        stav.textContent = "DNES";
-        b.setAttribute("aria-label", "Okénko " + cislo + ", dnešní");
-      } else if (otevreno.indexOf(cislo) !== -1) {
+        stitek.textContent = cislo + ".\u00a012.";
+        b.setAttribute("aria-label", "Okénko " + cislo + ", otevře se " + cislo + ". 12.");
+      } else if (jeOtevreno) {
         b.classList.add("dvirka--otevreno");
-        stav.textContent = "OTEVŘENO";
-        b.setAttribute("aria-label", "Okénko " + cislo + ", otevřené");
+        b.setAttribute("aria-label", "Okénko " + cislo + ": " + (data.nadpis || ""));
+      } else if (jeDnes(cislo)) {
+        b.classList.add("dvirka--dnes");
+        stitek.textContent = "DNES";
+        b.setAttribute("aria-label", "Okénko " + cislo + ", dnešní, otevři");
       } else {
-        b.setAttribute("aria-label", "Okénko " + cislo);
+        stitek.textContent = "OTEVŘI";
+        b.setAttribute("aria-label", "Okénko " + cislo + ", otevři");
       }
-      b.appendChild(stav);
-      b.addEventListener("click", function () { klik(cislo); });
+      b.addEventListener("click", function () { klik(cislo, b); });
       mrizka.appendChild(b);
     });
   }
 
   var casovac;
   function hlaska(text) {
-    var el = document.getElementById("hlaska");
-    el.textContent = text;
-    el.classList.add("hlaska--videt");
+    var h = document.getElementById("hlaska");
+    h.textContent = text;
+    h.classList.add("hlaska--videt");
     clearTimeout(casovac);
-    casovac = setTimeout(function () { el.classList.remove("hlaska--videt"); }, 2400);
+    casovac = setTimeout(function () { h.classList.remove("hlaska--videt"); }, 2400);
   }
 
-  function klik(cislo) {
+  function klik(cislo, b) {
     if (!jeOdemceno(cislo)) {
-      hlaska("Ještě ne. Vydrž do " + cislo + ". 12.");
+      b.classList.remove("dvirka--zatres");
+      void b.offsetWidth;
+      b.classList.add("dvirka--zatres");
+      hlaska("Ještě ne. Vydrž do " + cislo + ".\u00a012.");
       return;
     }
-    otevri(cislo);
+    if (otevreno.indexOf(cislo) !== -1) { otevri(cislo); return; }
+    // dvířka nejdřív vyjedou nahoru, pak se otevře obsah
+    b.classList.remove("dvirka--dnes");
+    b.classList.add("dvirka--otevreno");
+    otevreno.push(cislo);
+    ulozOtevreno();
+    var bezPohybu = window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches;
+    setTimeout(function () { otevri(cislo); }, bezPohybu ? 0 : 520);
   }
 
   function otevri(cislo) {
@@ -166,9 +197,7 @@
 
     var foto = document.getElementById("okno-foto");
     foto.textContent = "";
-    var nahradni = document.createElement("span");
-    nahradni.className = "okno__foto-cislo";
-    nahradni.textContent = String(cislo);
+    var nahradni = el("span", "okno__foto-cislo", String(cislo));
     if (data.foto) {
       var img = document.createElement("img");
       img.alt = "";
@@ -195,9 +224,8 @@
       odkaz.hidden = true;
     }
 
+    okno.scrollTop = 0;
     if (typeof okno.showModal === "function") okno.showModal(); else okno.setAttribute("open", "");
-    if (otevreno.indexOf(cislo) === -1) { otevreno.push(cislo); ulozOtevreno(); }
-    vykresliMrizku();
   }
 
   function zavri() {
@@ -205,26 +233,71 @@
     if (typeof okno.close === "function") okno.close(); else okno.removeAttribute("open");
   }
 
-  function vykresliUvod() {
-    var u = okenka["úvod"] || okenka["uvod"];
-    if (u) {
-      if (u.nadpis) document.getElementById("uvod-nadpis").textContent = u.nadpis.toUpperCase();
-      vykresliText(u.radky, document.getElementById("uvod-text"));
-    }
+  // ---------- hlavička a odpočet ----------
+  var odpocetTimer;
+  function dvojciferne(n) { return (n < 10 ? "0" : "") + n; }
+  function tikni() {
+    var start = Date.parse(ROK + "-12-01T00:00:00+01:00");
+    var zbyva = Math.max(0, start - Date.now());
+    var s = Math.floor(zbyva / 1000);
+    document.getElementById("o-dny").textContent = dvojciferne(Math.floor(s / 86400));
+    document.getElementById("o-hod").textContent = dvojciferne(Math.floor(s % 86400 / 3600));
+    document.getElementById("o-min").textContent = dvojciferne(Math.floor(s % 3600 / 60));
+    document.getElementById("o-sek").textContent = dvojciferne(s % 60);
+  }
+
+  function vykresliStav() {
     var stav = document.getElementById("stav");
+    var odpocet = document.getElementById("odpocet");
     var dnes = dnesPraha();
-    var start = { rok: ROK, mesic: MESIC, den: 1 };
-    if (nahled) {
-      document.getElementById("nahled-info").hidden = false;
-      stav.textContent = "NÁHLED";
-    } else if (porovnej(dnes, start) < 0) {
-      var zbyva = Math.round((Date.UTC(ROK, MESIC - 1, 1) - Date.UTC(dnes.rok, dnes.mesic - 1, dnes.den)) / 86400000);
-      stav.textContent = "OKÉNKA SE OTEVÍRAJÍ 1. 12. · ZBÝVÁ " + zbyva + (zbyva === 1 ? " DEN" : zbyva < 5 ? " DNY" : " DNÍ");
-    } else if (porovnej(dnes, { rok: ROK, mesic: MESIC, den: POCET }) > 0) {
+    clearInterval(odpocetTimer);
+    odpocet.hidden = true;
+    if (nahled && simulace === "vse") {
+      stav.textContent = "NÁHLED · VŠECHNA OKÉNKA ODEMČENÁ";
+    } else if (predStartem()) {
+      stav.textContent = "ADVENT 2026 · OD 1. 12.";
+      odpocet.hidden = false;
+      tikni();
+      odpocetTimer = setInterval(tikni, 1000);
+    } else if (porovnej(dnes, datumOkenka(POCET)) > 0) {
       stav.textContent = "VŠECHNA OKÉNKA JSOU OTEVŘENÁ";
     } else {
-      stav.textContent = "DNES JE " + dnes.den + ". 12. · OTEVŘI SVOJE OKÉNKO";
+      stav.textContent = denVTydnu(dnes.den) + " " + dnes.den + ". 12. · OTEVŘI DNEŠNÍ OKÉNKO";
     }
+  }
+
+  function vykresliUvod() {
+    var u = okenka["úvod"] || okenka["uvod"];
+    if (!u) return;
+    if (u.nadpis) document.getElementById("uvod-nadpis").textContent = u.nadpis.toUpperCase();
+    vykresliText(u.radky, document.getElementById("uvod-text"));
+  }
+
+  // ---------- lišta náhledu ----------
+  function nastavNahled() {
+    if (!nahled) return;
+    var lista = document.getElementById("nahled-lista");
+    var vyber = document.getElementById("nahled-den");
+    lista.hidden = false;
+    var moznosti = [["vse", "Vše odemčené"], ["pred", "Před startem (odpočet)"]];
+    for (var d = 1; d <= POCET; d++) moznosti.push([String(d), "Jako by bylo " + d + ". 12."]);
+    moznosti.push(["po", "Po Vánocích"]);
+    moznosti.forEach(function (m) {
+      var o = document.createElement("option");
+      o.value = m[0]; o.textContent = m[1];
+      vyber.appendChild(o);
+    });
+    vyber.addEventListener("change", function () {
+      simulace = /^\d+$/.test(vyber.value) ? parseInt(vyber.value, 10) : vyber.value;
+      vykresliStav();
+      vykresliMrizku(false);
+    });
+    document.getElementById("nahled-reset").addEventListener("click", function () {
+      otevreno = [];
+      ulozOtevreno();
+      vykresliMrizku(false);
+      hlaska("Všechna okénka jsou zase zavřená.");
+    });
   }
 
   document.getElementById("okno-zavrit").addEventListener("click", zavri);
@@ -232,6 +305,7 @@
     if (e.target === this) zavri();
   });
 
+  nastavNahled();
   fetch("okenka.md", { cache: "no-store" })
     .then(function (r) { if (!r.ok) throw new Error(r.status); return r.text(); })
     .then(function (md) {
@@ -244,6 +318,7 @@
     .catch(function () { /* bez textů se ukážou aspoň čísla */ })
     .then(function () {
       vykresliUvod();
-      vykresliMrizku();
+      vykresliStav();
+      vykresliMrizku(true);
     });
 })();

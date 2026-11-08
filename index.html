@@ -9,43 +9,61 @@
 <meta property="og:description" content="24 okének, každý den jedno. Tipy, výzvy a pár dárků od Bunker Timpo.">
 <meta property="og:type" content="website">
 <meta name="theme-color" content="#1A1B1D">
+<link rel="icon" href="logo/bt-logo-bile.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500&family=Barlow+Condensed:wght@600;700&family=Saira+Stencil+One&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500&family=Barlow+Condensed:wght@600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styl.css">
 </head>
 <body>
+  <div class="nahled-lista" id="nahled-lista" hidden>
+    <span class="nahled-lista__stitek">NÁHLED</span>
+    <label for="nahled-den">Ukaž, jak to vypadá:</label>
+    <select id="nahled-den"></select>
+    <button type="button" id="nahled-reset">Zavřít všechna okénka</button>
+  </div>
+
   <header class="hlavicka">
-    <div class="hlavicka__logo">
-      <img src="logo/bt-logo-bile.png" alt="Bunker Timpo" onerror="this.hidden=true;this.nextElementSibling.hidden=false">
-      <span class="slovni-znacka" hidden>BUNKER TIMPO</span>
-    </div>
-    <p class="label" id="stav">ADVENT 2026</p>
+    <img class="hlavicka__logo" src="logo/bt-logo-bile.svg" alt="Bunker Timpo">
+    <p class="label hlavicka__nadtitul" id="stav">ADVENT 2026</p>
     <h1 class="titulek" id="uvod-nadpis">ADVENT V BUNKRU</h1>
     <div class="uvod-text" id="uvod-text"></div>
   </header>
 
-  <div class="pruh" aria-hidden="true"></div>
+  <div class="pruh" aria-hidden="true"><span></span></div>
+
+  <section class="odpocet" id="odpocet" hidden aria-live="off">
+    <p class="label">PRVNÍ OKÉNKO SE OTEVŘE ZA</p>
+    <div class="odpocet__cisla">
+      <div><b id="o-dny">00</b><span>DNÍ</span></div>
+      <div><b id="o-hod">00</b><span>HODIN</span></div>
+      <div><b id="o-min">00</b><span>MINUT</span></div>
+      <div><b id="o-sek">00</b><span>SEKUND</span></div>
+    </div>
+  </section>
 
   <main>
-    <p class="nahled-info" id="nahled-info" hidden>NÁHLED: všechna okénka jsou odemčená. Lidé bez ?nahled=1 v adrese je vidí podle data.</p>
     <div class="mrizka" id="mrizka" aria-label="Okénka adventního kalendáře"></div>
   </main>
 
   <footer class="paticka">
-    <p><strong>Bunker Timpo</strong> · OD Timpo, Olomouc - Neředín</p>
-    <p>
-      <a href="https://www.instagram.com/bunker_timpo">Instagram @bunker_timpo</a> ·
-      <a href="https://www.facebook.com/bunkertimpo">facebook.com/bunkertimpo</a> ·
-      <a href="https://bunkertimpo.cz">bunkertimpo.cz</a>
-    </p>
+    <img class="paticka__logo" src="logo/bt-logo-bile.svg" alt="">
+    <div>
+      <p><strong>BUNKER TIMPO</strong></p>
+      <p>OD Timpo, Olomouc - Neředín</p>
+      <p>
+        <a href="https://www.instagram.com/bunker_timpo">Instagram @bunker_timpo</a> ·
+        <a href="https://www.facebook.com/bunkertimpo">facebook.com/bunkertimpo</a> ·
+        <a href="https://bunkertimpo.cz">bunkertimpo.cz</a>
+      </p>
+    </div>
   </footer>
 
   <dialog class="okno" id="okno" aria-labelledby="okno-nadpis">
-    <div class="okno__pruh" aria-hidden="true"></div>
+    <div class="okno__pruh" aria-hidden="true"><span></span></div>
     <button class="okno__zavrit" id="okno-zavrit" type="button">ZAVŘÍT ✕</button>
+    <div class="okno__foto" id="okno-foto"></div>
     <div class="okno__obsah">
-      <div class="okno__foto" id="okno-foto"></div>
       <p class="label" id="okno-datum"></p>
       <h2 class="okno__nadpis" id="okno-nadpis"></h2>
       <div class="okno__text" id="okno-text"></div>
