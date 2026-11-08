@@ -180,14 +180,18 @@
       hlaska("Ještě ne. Vydrž do " + cislo + ".\u00a012.");
       return;
     }
+    if (b.classList.contains("dvirka--otevira")) return;
     if (otevreno.indexOf(cislo) !== -1) { otevri(cislo); return; }
     // dvířka nejdřív vyjedou nahoru, pak se otevře obsah
-    b.classList.remove("dvirka--dnes");
-    b.classList.add("dvirka--otevreno");
+    b.classList.add("dvirka--otevira");
     otevreno.push(cislo);
     ulozOtevreno();
     var bezPohybu = window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches;
-    setTimeout(function () { otevri(cislo); }, bezPohybu ? 0 : 520);
+    setTimeout(function () {
+      b.classList.remove("dvirka--otevira", "dvirka--dnes");
+      b.classList.add("dvirka--otevreno");
+      otevri(cislo);
+    }, bezPohybu ? 0 : 1250);
   }
 
   function otevri(cislo) {
