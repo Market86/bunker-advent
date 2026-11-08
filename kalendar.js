@@ -180,6 +180,8 @@
       b.classList.remove("dvirka--zatres");
       void b.offsetWidth;
       b.classList.add("dvirka--zatres");
+      zvukZamceno();
+      vibruj([40, 60, 40]);
       hlaska("Ještě ne. Vydrž do " + cislo + ".\u00a012.");
       return;
     }
@@ -263,6 +265,15 @@
     bouchnuti(ctx, t + 0.69, 0.5);                                                                    // spadne zpátky
     for (var j = 0; j < 22; j++) sum(ctx, t + 1.06 + j * 0.028, 0.025, 1300 + j * 40, 0.22, 5);        // roleta jede nahoru
     bouchnuti(ctx, t + 1.67, 1);                                                                      // náraz nahoře
+  }
+  function zvukZamceno() {
+    if (!zvukZap) return;
+    var ctx = audio(); if (!ctx) return;
+    var t = ctx.currentTime + 0.02;
+    // dvakrát zalomcuje zamčeným poklopem a cvakne zámek
+    [0, 0.1, 0.2, 0.3].forEach(function (d, i) { sum(ctx, t + d, 0.05, 1800 + (i % 2) * 500, 0.3, 5); });
+    bouchnuti(ctx, t + 0.05, 0.25);
+    bouchnuti(ctx, t + 0.25, 0.25);
   }
   function vibruj(vzor) {
     if (!zvukZap) return;
@@ -413,6 +424,13 @@
     });
     vyber.addEventListener("change", function () {
       simulace = /^\d+$/.test(vyber.value) ? parseInt(vyber.value, 10) : vyber.value;
+      // aby šlo dnešní okénko otevřít s celou animací, zavři dnešní a budoucí
+      if (typeof simulace === "number") {
+        otevreno = otevreno.filter(function (c) { return c < simulace; });
+        ulozOtevreno();
+      } else if (simulace === "pred") {
+        otevreno = []; ulozOtevreno();
+      }
       vykresliStav();
       vykresliMrizku(false);
       vykresliPostup();

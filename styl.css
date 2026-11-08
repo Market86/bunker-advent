@@ -269,9 +269,9 @@ main { max-width: 1080px; margin: 0 auto; padding: 36px var(--okraj) 56px; }
 }
 /* Za roletou svítí barva zóny */
 .dvirka--otevira .dvirka__za { background: var(--magenta); border-color: var(--magenta); }
-.dvirka--otevira .dvirka__za span { color: var(--white); }
+.dvirka--otevira .dvirka__za b,
+.dvirka--otevira .dvirka__za span { visibility: hidden; }
 .dvirka--otevira.dvirka--zluta .dvirka__za { background: var(--yellow); border-color: var(--yellow); color: var(--black); }
-.dvirka--otevira.dvirka--zluta .dvirka__za span { color: var(--black); }
 /* Ostatní dvířka ztmavnou */
 .mrizka--fokus .dvirka:not(.dvirka--otevira) { opacity: .25; transition: opacity .4s ease; }
 .mrizka .dvirka { transition: opacity .4s ease; }
