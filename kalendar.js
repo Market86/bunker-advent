@@ -136,7 +136,7 @@
 
       var za = el("span", "dvirka__za");
       var logo = el("img", "dvirka__logo");
-      logo.src = data.zona === "zluta" ? "logo/bt-logo-cerne.svg" : "logo/bt-logo-bile.svg";
+      logo.src = (data.zona === "zluta" && !jeDnes(cislo)) ? "logo/bt-logo-cerne.svg" : "logo/bt-logo-bile.svg";
       logo.alt = "";
       za.appendChild(logo);
       za.appendChild(el("b", null, String(cislo)));
@@ -219,7 +219,7 @@
       mrizka.classList.remove("mrizka--fokus");
       vykresliPostup();
       otevri(cislo);
-    }, 2150);
+    }, 2750);
   }
 
   // ---------- zvuk (vyrobený přímo v prohlížeči, žádný soubor) ----------

@@ -275,16 +275,18 @@ main { max-width: 1080px; margin: 0 auto; padding: 36px var(--okraj) 56px; }
   position: absolute; left: 50%; top: 50%;
   width: 62%; height: auto;
   transform: translate(-50%, -50%);
-  animation: logo-rozsvit 1.9s both;
+  animation: logo-rozsvit 2.7s both;
 }
 @keyframes logo-rozsvit {
-  0%, 30% { opacity: 0; transform: translate(-50%, -50%) scale(.85); }
-  85%     { opacity: 1; transform: translate(-50%, -50%) scale(1); }
-  100%    { opacity: 1; transform: translate(-50%, -50%) scale(1.04); }
+  0%, 12% { opacity: 0; transform: translate(-50%, -50%) scale(.8); }
+  45%     { opacity: 1; transform: translate(-50%, -50%) scale(.95); }
+  100%    { opacity: 1; transform: translate(-50%, -50%) scale(1.08); }
 }
 .dvirka--otevira .dvirka__za b,
 .dvirka--otevira .dvirka__za span { visibility: hidden; }
 .dvirka--otevira.dvirka--zluta .dvirka__za { background: var(--yellow); border-color: var(--yellow); color: var(--black); }
+/* Dnešní dvířka jsou sama barevná – za nimi je proto černá, ať je roleta vidět */
+.dvirka--otevira.dvirka--dnes .dvirka__za { background: var(--black); border-color: var(--line); }
 /* Ostatní dvířka ztmavnou */
 .mrizka--fokus .dvirka:not(.dvirka--otevira) { opacity: .25; transition: opacity .4s ease; }
 .mrizka .dvirka { transition: opacity .4s ease; }
