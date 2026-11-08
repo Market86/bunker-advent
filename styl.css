@@ -310,12 +310,21 @@ main { max-width: 1080px; margin: 0 auto; padding: 36px var(--okraj) 56px; }
 @media (max-width: 620px) {
   .okno { height: 100dvh; margin: 0; }
 }
-.okno[open] { animation: vyjed .45s var(--pohyb) both; }
+.okno[open] { animation: vyjed .5s var(--pohyb) both; }
+.okno__foto { background: #111214; }
 @keyframes vyjed { from { transform: translateY(40px); opacity: 0; } to { transform: none; opacity: 1; } }
 .okno::backdrop { background: rgba(10, 10, 11, .88); }
 .okno__pruh { height: 32px; overflow: hidden; position: sticky; top: 0; z-index: 2; }
 .okno__pruh span { display: block; height: 100%; background: var(--magenta); transform-origin: left; }
-.okno[open] .okno__pruh span { animation: vtahni .6s var(--pohyb) both; }
+.okno[open] .okno__pruh span { animation: vtahni 1.5s cubic-bezier(.65, 0, .25, 1) both; }
+/* Fotka se pomalu prosvětlí z tmy, zároveň s pruhem */
+.okno[open] .okno__foto img,
+.okno[open] .okno__foto-cislo { animation: prosvetli 2.2s cubic-bezier(.3, 0, .2, 1) .15s both; }
+@keyframes prosvetli {
+  0%   { opacity: 0; filter: brightness(.15); transform: scale(1.12); }
+  45%  { opacity: 1; }
+  100% { opacity: 1; filter: brightness(1); transform: scale(1); }
+}
 .okno--zluta .okno__pruh span { background: var(--yellow); }
 .okno__zavrit {
   position: fixed;
@@ -340,10 +349,10 @@ main { max-width: 1080px; margin: 0 auto; padding: 36px var(--okraj) 56px; }
 .okno__foto img { width: 100%; height: 100%; object-fit: cover; display: block; }
 .okno__foto-cislo { font: 400 clamp(120px, 40vw, 220px)/1 var(--font-stencil); color: var(--line); }
 .okno__obsah { padding: 22px var(--okraj) calc(var(--okraj) + 16px); display: grid; gap: 14px; }
-.okno[open] .okno__obsah > * { animation: naskoc .45s var(--pohyb) both; }
-.okno[open] .okno__obsah > :nth-child(2) { animation-delay: .08s; }
-.okno[open] .okno__obsah > :nth-child(3) { animation-delay: .16s; }
-.okno[open] .okno__obsah > :nth-child(4) { animation-delay: .24s; }
+.okno[open] .okno__obsah > * { animation: naskoc .5s var(--pohyb) .8s both; }
+.okno[open] .okno__obsah > :nth-child(2) { animation-delay: .9s; }
+.okno[open] .okno__obsah > :nth-child(3) { animation-delay: 1s; }
+.okno[open] .okno__obsah > :nth-child(4) { animation-delay: 1.1s; }
 .okno__nadpis {
   margin: 0;
   font: 400 clamp(40px, 11vw, 64px)/0.95 var(--font-stencil);

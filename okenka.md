@@ -18,15 +18,15 @@ nadpis: Advent v Bunkru
 nadpis: Advent v Bunkru je tady
 foto: fotky/01.jpg
 
-Celý prosinec tu každý den otevřeš nové okénko. Tipy od Davida, výzvy, recept i pár dárků.
+Celý prosinec tu každý den otevřeš nové okénko. Tipy od Davida, výzvy, recept i pár dárků. 🎄
 
-A hlavně: každá permanentka koupená v prosinci je los o [hlavní cenu]. Losujeme po svátcích.
+A hlavně: každá permanentka koupená v prosinci je los o [hlavní cenu]. 🎁 Losujeme po svátcích.
 
 ## 2
 nadpis: Zahřej se, než zvedneš
 foto: fotky/02.jpg
 
-Venku mráz, tělo jak prkno? Než sáhneš na činku, dej si 10 minut na kole nebo veslu. Zahřátý sval zvedne víc a nebolí.
+Venku mráz, tělo jak prkno? 🥶 Než sáhneš na činku, dej si 10 minut na kole nebo veslu. Zahřátý sval zvedne víc a nebolí.
 
 Tip od Davida
 
@@ -43,21 +43,21 @@ odkaz: https://www.instagram.com/bunker_timpo | Označ nás na Instagramu
 
 24 kliků. Dneska. Klidně na kolenou, klidně na pětkrát.
 
-Natočíš to? Označ @bunker_timpo a sdílíme tě.
+Natočíš to? Označ @bunker_timpo a sdílíme tě. 💪
 
 ## 5
 nadpis: Ty doneseš jen tenisky
 foto: fotky/05.jpg
 
-Voda zdarma, ručník ti půjčíme, věci zamkneš do skříňky. Ty doneseš jen tenisky a chuť.
+Voda zdarma, ručník ti půjčíme, věci zamkneš do skříňky. Ty doneseš jen tenisky a chuť. 👟
 
 ## 6
 nadpis: Mikulášská nadílka
 foto: fotky/06.jpg
 
-Byl/a jsi letos hodný/á? Kdo dneska přijde na trénink, dostane od nás nadílku: [co].
+Byl/a jsi letos hodný/á? 🎅 Kdo dneska přijde na trénink, dostane od nás nadílku: [co].
 
-Hříšníci, co tu dlouho nebyli, dostanou taky. Ale čert si je zapíše.
+Hříšníci, co tu dlouho nebyli, dostanou taky. Ale čert si je zapíše. 😈
 
 Dnes máme otevřeno 9–12 a 17–20.
 
@@ -67,13 +67,13 @@ foto: fotky/07.jpg
 
 Paty dole, kolena za špičkami, záda rovně. Nejdřív technika, pak váha.
 
-Nevíš si rady? Chytni Davida.
+Nevíš si rady? Chytni Davida. 🏋️
 
 ## 8
 nadpis: Holky, tohle je i vaše železo
 foto: fotky/08.jpg
 
-Dámská šatna se zrcadlem a žehličkou na vlasy. Z tréninku rovnou do práce nebo na rande.
+Dámská šatna se zrcadlem a žehličkou na vlasy. Z tréninku rovnou do práce nebo na rande. 💅
 
 ## 9
 nadpis: Výzva: plank
@@ -84,23 +84,23 @@ Lokty pod ramena, tělo rovně a drž. Kluci z Bunkru to zkusili za tebe:
 - David: [čas]
 - Ondra: [čas]
 
-Dáš víc? Napiš nám svůj čas do zpráv. Nejlepší ukážeme ve story.
+Dáš víc? ⏱️ Napiš nám svůj čas do zpráv. Nejlepší ukážeme ve story.
 
 ## 10
 nadpis: Dárek pod stromeček
 foto: fotky/10.jpg
 
-Ponožky už dostal/a minulý rok. Daruj permanentku do posilovny nebo na solárium.
+Ponožky už dostal/a minulý rok. 🧦 Daruj permanentku do posilovny nebo na solárium.
 
 [cena, kde koupit]
 
-A každá prosincová permanentka je los o [hlavní cenu].
+A každá prosincová permanentka je los o [hlavní cenu]. 🎁
 
 ## 11
 nadpis: Magnézium? Klidně
 foto: fotky/11.jpg
 
-U nás žádné zákazy a žádné kázání. Magnézium si klidně vezmi. Hlavně ať ti činka neujede.
+U nás žádné zákazy a žádné kázání. Magnézium si klidně vezmi. Hlavně ať ti činka neujede. 😉
 
 ## 12
 nadpis: Sobota večer
@@ -108,7 +108,7 @@ foto: fotky/12.jpg
 
 Dneska máme otevřeno 17–20. Volné stroje, klid, žádné čekání.
 
-Odmakej a večer si užij s čistým svědomím.
+Odmakej a večer si užij s čistým svědomím. 🔥
 
 ## 13
 nadpis: Sál 90 m²
@@ -117,7 +117,7 @@ zona: zluta
 
 Kromě činkárny máme i sál 90 m² s vlastní šatnou. Tančí se tu a cvičí.
 
-Dopoledne je volný, tak jestli vedeš lekce, ozvi se nám.
+Dopoledne je volný, tak jestli vedeš lekce, ozvi se nám. 💃
 
 ## 14
 nadpis: Seznam se s Davidem
@@ -132,7 +132,7 @@ nadpis: Venku šedivo, v Bunkru léto
 foto: fotky/15.jpg
 zona: zluta
 
-Po tréninku rovnou do solária a domů jdeš s barvou.
+Po tréninku rovnou do solária a domů jdeš s barvou. ☀️
 
 ## 16
 nadpis: Lepší ceny u Reva Sport
@@ -146,7 +146,7 @@ Máš permanentku? Pak máš i lepší ceny na doplňky u Reva Sport.
 nadpis: Svátky bez restartu
 foto: fotky/17.jpg
 
-Přes svátky nemusíš makat jako normálně. Dva kratší tréninky týdně a v lednu nezačínáš od nuly.
+Přes svátky nemusíš makat jako normálně. Dva kratší tréninky týdně a v lednu nezačínáš od nuly. 🙌
 
 Tip od Davida
 
@@ -154,20 +154,20 @@ Tip od Davida
 nadpis: Výzva: přiveď parťáka
 foto: fotky/18.jpg
 
-Ve dvou se líp dřepuje i hecuje. Vezmi kámoše nebo kámošku na trénink a pošli nám společnou fotku.
+Ve dvou se líp dřepuje i hecuje. Vezmi kámoše nebo kámošku na trénink a pošli nám společnou fotku. 📸
 
 ## 19
 nadpis: Ranní ptáče, nebo noční sova?
 foto: fotky/19.jpg
 odkaz: https://www.instagram.com/bunker_timpo | Hlasuj ve story
 
-Kdy nejradši trénuješ? Ráno, odpoledne, nebo večer? Hlasuj v naší story na Instagramu, výsledky ukážeme zítra.
+Kdy nejradši trénuješ? Ráno 🌅, odpoledne ☕, nebo večer 🌙? Hlasuj v naší story na Instagramu, výsledky ukážeme zítra.
 
 ## 20
 nadpis: Proteinové kuličky bez pečení
 foto: fotky/20.jpg
 
-Cukroví, po kterém nemusíš do Bunkru dvakrát.
+Cukroví, po kterém nemusíš do Bunkru dvakrát. 🍪
 
 - 100 g ovesných vloček
 - 30 g vanilkového proteinu (1 odměrka)
@@ -184,13 +184,13 @@ foto: fotky/21.jpg
 
 Zaparkuj u OD Timpo, jdi k bočnímu vchodu ze Stiborovy a dole hledej naše dveře hned vedle střelnice Gunsport.
 
-Kdo jednou trefí, už nezabloudí.
+Kdo jednou trefí, už nezabloudí. 📍
 
 ## 22
 nadpis: Pořád stihneš
 foto: fotky/22.jpg
 
-Dárek pořád nemáš? V klidu. Permanentka do posilovny nebo na solárium se vejde pod každý stromeček.
+Dárek pořád nemáš? V klidu. 🎁 Permanentka do posilovny nebo na solárium se vejde pod každý stromeček.
 
 Do hry o [hlavní cenu] jsou všechny permanentky koupené do 31. 12.
 
@@ -200,7 +200,7 @@ foto: fotky/23.jpg
 
 Kdy máme otevřeno: [doplnit 24.–31. 12.]
 
-Mezi svátky klidně přijď vytrávit.
+Mezi svátky klidně přijď vytrávit. 🍗
 
 ## 24
 nadpis: Je to tady
@@ -208,6 +208,6 @@ foto: fotky/24.jpg
 
 Štědrý den! Díky, že jste s námi v prvním roce Bunkru.
 
-Výherce [hlavní ceny] vylosujeme a vyhlásíme po svátcích, [datum]. Nový rok, nová forma.
+Výherce [hlavní ceny] vylosujeme a vyhlásíme po svátcích, [datum]. Nový rok, nová forma. 💪
 
-Krásné svátky!
+Krásné svátky! 🎄✨
