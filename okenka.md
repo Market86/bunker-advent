@@ -98,10 +98,14 @@ Ponožky už dostal/a minulý rok. 🧦 Daruj permanentku do posilovny nebo na s
 A každá prosincová permanentka je los o [hlavní cenu]. 🎁
 
 ## 11
-nadpis: Magnézium? Klidně
+nadpis: Na zdraví i na svaly
 foto: fotky/11.jpg
 
-U nás žádné zákazy a žádné kázání. Magnézium si klidně vezmi. Hlavně ať ti činka neujede. 😉
+Věděli jste, že na bar chystáme proteinové nealko prosecco? 🥂 Bublinky, sváteční nálada a k tomu bílkoviny.
+
+[od kdy bude k dostání]
+
+Přiťukneme si v Bunkru!
 
 ## 12
 nadpis: Sobota večer
