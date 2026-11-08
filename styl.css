@@ -1,0 +1,235 @@
+/* Bunker Timpo – adventní kalendář. Barvy a písma podle design systému Bunker Timpo. */
+@font-face {
+  font-family: "Aero Matics Stencil CZ";
+  src: url("fonty/AeroMaticsStencilCZ-Bold.ttf") format("truetype");
+  font-weight: 400;
+  font-display: swap;
+}
+
+:root {
+  --magenta: #CC0077;
+  --yellow: #FFB800;
+  --black: #1A1B1D;
+  --gray: #8A8D91;
+  --white: #F2F2F0;
+  --surface-raised: #26272a;
+  --line: #3a3b3f;
+  --stripe: var(--magenta);
+  --font-stencil: "Aero Matics Stencil CZ", "Saira Stencil One", "Barlow Condensed", Impact, sans-serif;
+  --font-condensed: "Barlow Condensed", "Arial Narrow", sans-serif;
+  --font-sans: "Barlow", "Helvetica Neue", Arial, sans-serif;
+  --okraj: clamp(20px, 5vw, 40px);
+}
+
+* { box-sizing: border-box; }
+html { background: var(--black); }
+body {
+  margin: 0;
+  background: var(--black);
+  color: var(--white);
+  font: 400 16px/24px var(--font-sans);
+  overflow-x: hidden;
+}
+a { color: var(--white); }
+[hidden] { display: none !important; }
+
+.label {
+  margin: 0;
+  font: 600 15px/1.2 var(--font-condensed);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gray);
+}
+
+/* Hlavička */
+.hlavicka {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: var(--okraj) var(--okraj) 28px;
+  display: grid;
+  gap: 12px;
+}
+.hlavicka__logo { display: flex; justify-content: flex-end; }
+.hlavicka__logo img { width: 120px; height: auto; }
+.slovni-znacka { font: 400 22px/1 var(--font-stencil); letter-spacing: 0.04em; }
+.titulek {
+  margin: 0;
+  font: 400 clamp(48px, 12vw, 104px)/0.92 var(--font-stencil);
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+}
+.uvod-text { max-width: 560px; color: var(--white); }
+.uvod-text p { margin: 0 0 8px; }
+
+/* Pruh: souvislý, vodorovný, vybíhá za okraje */
+.pruh {
+  height: 32px;
+  width: 100vw;
+  background: var(--stripe);
+}
+
+/* Mřížka okének */
+main {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 32px var(--okraj) 48px;
+}
+.nahled-info {
+  margin: 0 0 20px;
+  padding: 10px 14px;
+  background: var(--yellow);
+  color: var(--black);
+  font: 600 15px/1.3 var(--font-condensed);
+  letter-spacing: 0.04em;
+}
+.mrizka {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+}
+@media (min-width: 720px) {
+  .mrizka { grid-template-columns: repeat(6, 1fr); gap: 12px; }
+}
+
+.dvirka {
+  position: relative;
+  aspect-ratio: 1;
+  border: 1px solid var(--line);
+  border-radius: 0;
+  background: var(--surface-raised);
+  color: var(--white);
+  font: 400 clamp(32px, 9vw, 56px)/1 var(--font-stencil);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  transition: transform .15s ease, background .15s ease;
+}
+.dvirka:hover { transform: translateY(-2px); }
+.dvirka:focus-visible { outline: 3px solid var(--white); outline-offset: 2px; }
+.dvirka__stav {
+  position: absolute;
+  left: 6px; right: 6px; bottom: 6px;
+  font: 600 11px/1 var(--font-condensed);
+  letter-spacing: 0.1em;
+  text-align: center;
+  color: var(--gray);
+}
+.dvirka--zamceno { background: var(--black); color: var(--gray); }
+.dvirka--dnes {
+  background: var(--magenta);
+  border-color: var(--magenta);
+  color: var(--white);
+}
+.dvirka--dnes .dvirka__stav { color: var(--white); }
+.dvirka--otevreno { background: var(--surface-raised); }
+.dvirka--otevreno::after {
+  content: "";
+  position: absolute;
+  left: 0; right: 0; top: 0;
+  height: 6px;
+  background: var(--stripe-dvirka, var(--magenta));
+}
+.dvirka--zluta { --stripe-dvirka: var(--yellow); }
+
+/* Okno s obsahem okénka */
+.okno {
+  width: min(640px, 100vw);
+  max-height: 100dvh;
+  margin: auto;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: var(--black);
+  color: var(--white);
+  overflow: auto;
+}
+.okno::backdrop { background: rgba(10, 10, 11, 0.85); }
+.okno__pruh { height: 32px; background: var(--magenta); }
+.okno--zluta .okno__pruh { background: var(--yellow); }
+.okno__zavrit {
+  position: absolute;
+  top: 44px; right: 16px;
+  z-index: 2;
+  padding: 8px 12px;
+  border: 0;
+  border-radius: 4px;
+  background: var(--black);
+  color: var(--white);
+  font: 600 14px/1 var(--font-condensed);
+  letter-spacing: 0.1em;
+  cursor: pointer;
+}
+.okno__obsah { padding: 0 var(--okraj) var(--okraj); display: grid; gap: 14px; }
+.okno__foto {
+  margin: 0 calc(var(--okraj) * -1) 8px;
+  aspect-ratio: 4 / 3;
+  background: var(--surface-raised);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.okno__foto img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.okno__foto-cislo {
+  font: 400 clamp(96px, 30vw, 180px)/1 var(--font-stencil);
+  color: var(--line);
+}
+.okno__nadpis {
+  margin: 0;
+  font: 400 clamp(36px, 9vw, 56px)/0.95 var(--font-stencil);
+  text-transform: uppercase;
+  letter-spacing: 0.01em;
+}
+.okno__text p { margin: 0 0 12px; }
+.okno__text ul { margin: 0 0 12px; padding-left: 20px; }
+.okno__text li { margin-bottom: 4px; }
+.okno__text .podpis { color: var(--gray); font: 600 15px/1.2 var(--font-condensed); letter-spacing: 0.12em; text-transform: uppercase; }
+.tlacitko {
+  justify-self: start;
+  padding: 12px 18px;
+  border-radius: 4px;
+  background: var(--magenta);
+  color: var(--white);
+  text-decoration: none;
+  font: 600 16px/1 var(--font-condensed);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+.okno--zluta .tlacitko { background: var(--yellow); color: var(--black); }
+
+/* Krátká hláška u zamčeného okénka */
+.hlaska {
+  position: fixed;
+  left: 50%; bottom: 24px;
+  transform: translate(-50%, 20px);
+  padding: 12px 18px;
+  background: var(--white);
+  color: var(--black);
+  font: 600 16px/1.2 var(--font-condensed);
+  letter-spacing: 0.04em;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .2s ease, transform .2s ease;
+  max-width: calc(100vw - 32px);
+  text-align: center;
+}
+.hlaska--videt { opacity: 1; transform: translate(-50%, 0); }
+
+/* Patička */
+.paticka {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 24px var(--okraj) 40px;
+  border-top: 1px solid var(--line);
+  color: var(--gray);
+  font: 500 13px/18px var(--font-sans);
+}
+.paticka p { margin: 0 0 6px; }
+.paticka strong { color: var(--white); }
+.paticka a { color: var(--gray); }
+
+@media (prefers-reduced-motion: reduce) {
+  * { transition: none !important; }
+}
