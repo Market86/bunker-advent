@@ -9,6 +9,8 @@
   // Pevné "náhodné" pořadí okének v mřížce
   var PORADI = [7, 15, 2, 21, 11, 18, 4, 23, 9, 1, 13, 20, 16, 6, 24, 10, 3, 19, 12, 22, 5, 17, 8, 14];
   var DNY = ["NE", "PO", "ÚT", "ST", "ČT", "PÁ", "SO"];
+  // Adresa, kterou lidé sdílí (tlačítko Pošli kámošovi). Až bude bunkertimpo.cz/advent, přepiš ji sem.
+  var ADRESA_KALENDARE = "https://market86.github.io/bunker-advent/";
   var OSTRE_ADRESY = /(^|\.)github\.io$|(^|\.)bunkertimpo\.cz$/i;
 
   // Náhled: ?nahled=1, nebo když stránka neběží na ostré adrese (třeba náhled v Claude)
@@ -182,20 +184,136 @@
     }
     if (b.classList.contains("dvirka--otevira")) return;
     if (otevreno.indexOf(cislo) !== -1) { otevri(cislo); return; }
-    // dvířka nejdřív vyjedou nahoru, pak se otevře obsah
-    b.classList.add("dvirka--otevira");
+    // dvířka: zarachotí, cuknou, spadnou, zaberou a vystřelí nahoru – pak se otevře obsah
+    var bezPohybu = window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches;
     otevreno.push(cislo);
     ulozOtevreno();
-    var bezPohybu = window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (bezPohybu) {
+      b.classList.remove("dvirka--dnes");
+      b.classList.add("dvirka--otevreno");
+      vykresliPostup();
+      otevri(cislo);
+      return;
+    }
+    var mrizka = document.getElementById("mrizka");
+    b.classList.add("dvirka--otevira");
+    mrizka.classList.add("mrizka--fokus");
+    zvukRolety();
+    vibruj([25, 120, 25]);
+    setTimeout(function () {                 // náraz nahoře
+      document.body.classList.remove("otres");
+      void document.body.offsetWidth;
+      document.body.classList.add("otres");
+      vibruj([60]);
+    }, 1670);
     setTimeout(function () {
       b.classList.remove("dvirka--otevira", "dvirka--dnes");
       b.classList.add("dvirka--otevreno");
+      mrizka.classList.remove("mrizka--fokus");
+      vykresliPostup();
       otevri(cislo);
-    }, bezPohybu ? 0 : 1250);
+    }, 2150);
+  }
+
+  // ---------- zvuk (vyrobený přímo v prohlížeči, žádný soubor) ----------
+  var KLIC_ZVUK = "bunker-advent-zvuk";
+  var zvukZap = false;
+  try { zvukZap = localStorage.getItem(KLIC_ZVUK) === "1"; } catch (e) { /* nevadí */ }
+  var ac = null;
+  function audio() {
+    if (!ac) {
+      var AC = window.AudioContext || window.webkitAudioContext;
+      if (!AC) return null;
+      ac = new AC();
+    }
+    if (ac.state === "suspended") ac.resume();
+    return ac;
+  }
+  function sum(ctx, cas, delka, frekvence, hlasitost, q) {
+    var n = Math.floor(ctx.sampleRate * delka);
+    var buf = ctx.createBuffer(1, n, ctx.sampleRate);
+    var d = buf.getChannelData(0);
+    for (var i = 0; i < n; i++) d[i] = Math.random() * 2 - 1;
+    var src = ctx.createBufferSource(); src.buffer = buf;
+    var f = ctx.createBiquadFilter(); f.type = "bandpass"; f.frequency.value = frekvence; f.Q.value = q || 1;
+    var g = ctx.createGain();
+    g.gain.setValueAtTime(hlasitost, cas);
+    g.gain.exponentialRampToValueAtTime(0.001, cas + delka);
+    src.connect(f); f.connect(g); g.connect(ctx.destination);
+    src.start(cas); src.stop(cas + delka);
+  }
+  function bouchnuti(ctx, cas, sila) {
+    var o = ctx.createOscillator(); o.type = "sine";
+    o.frequency.setValueAtTime(95, cas);
+    o.frequency.exponentialRampToValueAtTime(38, cas + 0.3);
+    var g = ctx.createGain();
+    g.gain.setValueAtTime(0.9 * sila, cas);
+    g.gain.exponentialRampToValueAtTime(0.001, cas + 0.35);
+    o.connect(g); g.connect(ctx.destination);
+    o.start(cas); o.stop(cas + 0.4);
+    sum(ctx, cas, 0.35, 900, 0.5 * sila, 6);
+    sum(ctx, cas, 0.12, 3200, 0.25 * sila, 3);
+  }
+  function zvukRolety() {
+    if (!zvukZap) return;
+    var ctx = audio(); if (!ctx) return;
+    var t = ctx.currentTime + 0.02;
+    for (var i = 0; i < 8; i++) sum(ctx, t + i * 0.045, 0.03, 2200 + Math.random() * 900, 0.35, 4);   // zarachocení
+    bouchnuti(ctx, t + 0.69, 0.5);                                                                    // spadne zpátky
+    for (var j = 0; j < 22; j++) sum(ctx, t + 1.06 + j * 0.028, 0.025, 1300 + j * 40, 0.22, 5);        // roleta jede nahoru
+    bouchnuti(ctx, t + 1.67, 1);                                                                      // náraz nahoře
+  }
+  function vibruj(vzor) {
+    if (!zvukZap) return;
+    try { if (navigator.vibrate) navigator.vibrate(vzor); } catch (e) { /* nevadí */ }
+  }
+  function nastavZvuk() {
+    var tl = document.getElementById("zvuk");
+    function ukaz() {
+      tl.setAttribute("aria-pressed", zvukZap ? "true" : "false");
+      document.getElementById("zvuk-text").textContent = zvukZap ? "ZVUK ZAP" : "ZVUK VYP";
+    }
+    ukaz();
+    tl.addEventListener("click", function () {
+      zvukZap = !zvukZap;
+      try { localStorage.setItem(KLIC_ZVUK, zvukZap ? "1" : "0"); } catch (e) { /* nevadí */ }
+      ukaz();
+      if (zvukZap) { var ctx = audio(); if (ctx) bouchnuti(ctx, ctx.currentTime + 0.02, 0.6); }
+    });
+  }
+
+  // ---------- postup ----------
+  function vykresliPostup() {
+    var box = document.getElementById("postup");
+    if (predStartem()) { box.hidden = true; return; }
+    box.hidden = false;
+    var pocet = otevreno.filter(function (c) { return jeOdemceno(c); }).length;
+    document.getElementById("postup-pocet").textContent = String(pocet);
+    document.getElementById("postup-pruh").style.width = (pocet / POCET * 100) + "%";
+  }
+
+  // ---------- sdílení ----------
+  var aktualniOkenko = null;
+  function sdilej() {
+    var data = okenka[aktualniOkenko] || {};
+    var text = "Advent v Bunkru, okénko " + aktualniOkenko + (data.nadpis ? ": " + data.nadpis : "") + ". Mrkni taky:";
+    if (navigator.share) {
+      navigator.share({ title: "Advent v Bunkru", text: text, url: ADRESA_KALENDARE }).catch(function () {});
+      return;
+    }
+    var hotovo = function () { hlaska("Odkaz zkopírovaný. Pošli ho kámošovi."); };
+    try {
+      navigator.clipboard.writeText(text + " " + ADRESA_KALENDARE).then(hotovo, function () {
+        hlaska("Pošli kámošovi odkaz: " + ADRESA_KALENDARE);
+      });
+    } catch (e) {
+      hlaska("Pošli kámošovi odkaz: " + ADRESA_KALENDARE);
+    }
   }
 
   function otevri(cislo) {
     var data = okenka[cislo] || { nadpis: "Okénko " + cislo, radky: [] };
+    aktualniOkenko = cislo;
     var okno = document.getElementById("okno");
     okno.classList.toggle("okno--zluta", data.zona === "zluta");
 
@@ -295,16 +413,20 @@
       simulace = /^\d+$/.test(vyber.value) ? parseInt(vyber.value, 10) : vyber.value;
       vykresliStav();
       vykresliMrizku(false);
+      vykresliPostup();
     });
     document.getElementById("nahled-reset").addEventListener("click", function () {
       otevreno = [];
       ulozOtevreno();
       vykresliMrizku(false);
+      vykresliPostup();
       hlaska("Všechna okénka jsou zase zavřená.");
     });
   }
 
   document.getElementById("okno-zavrit").addEventListener("click", zavri);
+  document.getElementById("okno-sdilet").addEventListener("click", sdilej);
+  nastavZvuk();
   document.getElementById("okno").addEventListener("click", function (e) {
     if (e.target === this) zavri();
   });
@@ -324,5 +446,6 @@
       vykresliUvod();
       vykresliStav();
       vykresliMrizku(true);
+      vykresliPostup();
     });
 })();

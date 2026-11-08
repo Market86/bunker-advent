@@ -84,6 +84,23 @@ a { color: var(--white); }
 }
 .strop__logo { width: clamp(64px, 16vw, 88px); height: auto; flex: none; }
 .strop__text { display: grid; gap: 4px; }
+.strop__text { flex: 1; }
+.zvuk {
+  align-self: flex-start;
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 8px 10px;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  background: transparent;
+  color: var(--gray);
+  font: 600 13px/1 var(--font-condensed);
+  letter-spacing: .12em;
+  cursor: pointer;
+}
+.zvuk[aria-pressed="true"] { color: var(--white); border-color: var(--white); }
+.zvuk #zvuk-vlny { display: none; }
+.zvuk[aria-pressed="true"] #zvuk-vlny { display: inline; }
+.zvuk[aria-pressed="true"] #zvuk-krizek { display: none; }
 .strop__nazev { font: 400 clamp(22px, 6vw, 30px)/1 var(--font-stencil); letter-spacing: .03em; }
 .hlavicka__nadtitul { animation: naskoc .5s var(--pohyb) 1s both; }
 .titulek {
@@ -133,6 +150,16 @@ a { color: var(--white); }
   font-variant-numeric: tabular-nums;
 }
 .odpocet__cisla span { font: 600 12px/1 var(--font-condensed); letter-spacing: .14em; color: var(--gray); }
+
+/* ---------- Postup ---------- */
+.postup { display: grid; gap: 10px; margin-bottom: 22px; animation: naskoc .5s var(--pohyb) 1.3s both; }
+.postup .label b { color: var(--white); font-weight: 700; }
+.postup__draha { height: 12px; background: var(--surface-raised); border: 1px solid var(--line); overflow: hidden; }
+.postup__draha span {
+  display: block; height: 100%; width: 0;
+  background: var(--magenta);
+  transition: width .9s cubic-bezier(.7, 0, .2, 1);
+}
 
 /* ---------- Mřížka okének ---------- */
 main { max-width: 1080px; margin: 0 auto; padding: 36px var(--okraj) 56px; }
@@ -217,15 +244,44 @@ main { max-width: 1080px; margin: 0 auto; padding: 36px var(--okraj) 56px; }
 .dvirka--dnes.dvirka--zluta .dvirka__dvere { background: var(--yellow); border-color: var(--yellow); color: var(--black); }
 .dvirka--dnes.dvirka--zluta .dvirka__stitek { color: var(--black); }
 
-/* Otevírání: těžká pancéřová roleta – cukne, zasekne se a vyjede */
-.dvirka--otevira .dvirka__dvere { animation: roleta 1.15s both; }
+/* Otevírání: těžká pancéřová roleta.
+   Zarachotí, cukne nahoru, spadne zpátky, zabere a vystřelí nahoru. Celé asi 2 s. */
+.dvirka--otevira { z-index: 5; animation: vystup .5s var(--pohyb) both !important; }
+@keyframes vystup { to { transform: scale(1.06); } }
+.dvirka--otevira .dvirka__dvere { animation: roleta 1.9s both; }
 @keyframes roleta {
-  0%   { transform: translateY(0); animation-timing-function: cubic-bezier(.3, 0, .5, 1); }
-  14%  { transform: translateY(-9%); animation-timing-function: ease-out; }
-  26%  { transform: translateY(-5%); }
-  38%  { transform: translateY(-5%); animation-timing-function: cubic-bezier(.6, 0, .25, 1); }
-  100% { transform: translateY(-101%); }
+  0%   { transform: translate(0, 0); }
+  4%   { transform: translate(-3px, 0); }
+  8%   { transform: translate(3px, -1%); }
+  12%  { transform: translate(-3px, 0); }
+  16%  { transform: translate(2px, -1%); }
+  20%  { transform: translate(0, 0); animation-timing-function: cubic-bezier(.3, 0, .4, 1); }
+  29%  { transform: translate(0, -12%); animation-timing-function: cubic-bezier(.6, 0, 1, 1); }
+  36%  { transform: translate(0, -3%); }
+  39%  { transform: translate(0, -5%); }
+  42%  { transform: translate(0, -3%); }
+  48%  { transform: translate(-1px, -4%); }
+  52%  { transform: translate(1px, -5%); }
+  56%  { transform: translate(-1px, -4%); animation-timing-function: cubic-bezier(.7, 0, .9, .6); }
+  88%  { transform: translate(0, -101%); }
+  92%  { transform: translate(0, -96%); }
+  100% { transform: translate(0, -101%); }
 }
+/* Za roletou svítí barva zóny */
+.dvirka--otevira .dvirka__za { background: var(--magenta); border-color: var(--magenta); }
+.dvirka--otevira .dvirka__za span { color: var(--white); }
+.dvirka--otevira.dvirka--zluta .dvirka__za { background: var(--yellow); border-color: var(--yellow); color: var(--black); }
+.dvirka--otevira.dvirka--zluta .dvirka__za span { color: var(--black); }
+/* Ostatní dvířka ztmavnou */
+.mrizka--fokus .dvirka:not(.dvirka--otevira) { opacity: .25; transition: opacity .4s ease; }
+.mrizka .dvirka { transition: opacity .4s ease; }
+/* Náraz rolety nahoře – celá stránka sebou trhne */
+.otres { animation: otres .35s ease-out; }
+@keyframes otres {
+  0%, 100% { transform: translateY(0); }
+  25% { transform: translateY(5px); } 55% { transform: translateY(-2px); } 80% { transform: translateY(1px); }
+}
+
 /* Otevřené: dvířka zůstanou nahoře */
 .dvirka--otevreno .dvirka__dvere { transform: translateY(-101%); }
 .dvirka--otevreno:hover .dvirka__dvere { transform: translateY(-101%); }
@@ -301,8 +357,10 @@ main { max-width: 1080px; margin: 0 auto; padding: 36px var(--okraj) 56px; }
 .okno__text li::before { content: ""; position: absolute; left: 0; top: 17px; width: 10px; height: 4px; background: var(--magenta); }
 .okno--zluta .okno__text li::before { background: var(--yellow); }
 .okno__text .podpis { color: var(--gray); font: 600 15px/1.2 var(--font-condensed); letter-spacing: 0.14em; text-transform: uppercase; }
+.tlacitka { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 4px; }
 .tlacitko {
-  justify-self: start;
+  cursor: pointer;
+  border: 2px solid var(--magenta);
   padding: 14px 20px;
   border-radius: 4px;
   background: var(--magenta);
@@ -312,7 +370,8 @@ main { max-width: 1080px; margin: 0 auto; padding: 36px var(--okraj) 56px; }
   letter-spacing: 0.12em;
   text-transform: uppercase;
 }
-.okno--zluta .tlacitko { background: var(--yellow); color: var(--black); }
+.okno--zluta .tlacitko { background: var(--yellow); border-color: var(--yellow); color: var(--black); }
+.tlacitko--obrys, .okno--zluta .tlacitko--obrys { background: transparent; border-color: var(--white); color: var(--white); }
 
 /* ---------- Hláška ---------- */
 .hlaska {
