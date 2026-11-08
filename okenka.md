@@ -4,7 +4,7 @@ Tady upravuješ všechny texty. Návod je v souboru README.md.
 Každé okénko začíná řádkem "## číslo". Pod ním:
 - nadpis: (povinné)
 - foto: (nepovinné, cesta k fotce ve složce fotky)
-- odkaz: (nepovinné, adresa | text tlačítka)
+- odkaz: (nepovinné, adresa | text tlačítka; může jich být víc pod sebou)
 - zona: zluta (jen pro sál a solárium)
 Pak prázdný řádek a text. Odstavce odděluj prázdným řádkem, odrážky začínají "- ".
 Hranaté závorky [takhle] znamenají, že je potřeba doplnit údaj.
@@ -39,11 +39,12 @@ foto: fotky/03.jpg
 ## 4
 nadpis: Výzva: 24 kliků
 foto: fotky/04.jpg
-odkaz: https://www.instagram.com/bunker_timpo | Označ nás na Instagramu
+odkaz: https://www.instagram.com/bunker_timpo | Instagram
+odkaz: https://www.facebook.com/bunkertimpo | Facebook
 
 24 kliků. Dneska. Klidně na kolenou, klidně na pětkrát.
 
-Natočíš to? Označ @bunker_timpo a sdílíme tě. 💪
+Natočíš to? Označ nás na Instagramu (@bunker_timpo) nebo na Facebooku (Bunker Timpo) a sdílíme tě. 💪
 
 ## 5
 nadpis: Ty doneseš jen tenisky
@@ -159,9 +160,10 @@ Ve dvou se líp dřepuje i hecuje. Vezmi kámoše nebo kámošku na trénink a p
 ## 19
 nadpis: Ranní ptáče, nebo noční sova?
 foto: fotky/19.jpg
-odkaz: https://www.instagram.com/bunker_timpo | Hlasuj ve story
+odkaz: https://www.instagram.com/bunker_timpo | Instagram
+odkaz: https://www.facebook.com/bunkertimpo | Facebook
 
-Kdy nejradši trénuješ? Ráno 🌅, odpoledne ☕, nebo večer 🌙? Hlasuj v naší story na Instagramu, výsledky ukážeme zítra.
+Kdy nejradši trénuješ? Ráno 🌅, odpoledne ☕, nebo večer 🌙? Hlasuj v naší story na Instagramu nebo Facebooku, výsledky ukážeme zítra.
 
 ## 20
 nadpis: Proteinové kuličky bez pečení

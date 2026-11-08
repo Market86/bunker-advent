@@ -66,14 +66,15 @@
     md.replace(/\r/g, "").split("\n").forEach(function (radek) {
       var h = radek.match(/^##\s+(.+?)\s*$/);
       if (h) {
-        aktualni = { nadpis: "", foto: "", odkaz: "", zona: "", radky: [] };
+        aktualni = { nadpis: "", foto: "", odkazy: [], zona: "", radky: [] };
         bloky[h[1].toLowerCase()] = aktualni;
         return;
       }
       if (!aktualni) return;
       var p = radek.match(/^(nadpis|foto|odkaz|zona):\s*(.*)$/i);
       if (p && aktualni.radky.join("").trim() === "") {
-        aktualni[p[1].toLowerCase()] = p[2].trim();
+        if (p[1].toLowerCase() === "odkaz") aktualni.odkazy.push(p[2].trim());
+        else aktualni[p[1].toLowerCase()] = p[2].trim();
         return;
       }
       aktualni.radky.push(radek);
@@ -335,16 +336,17 @@
     document.getElementById("okno-nadpis").textContent = data.nadpis || ("Okénko " + cislo);
     vykresliText(data.radky || [], document.getElementById("okno-text"));
 
-    var odkaz = document.getElementById("okno-odkaz");
-    var casti = (data.odkaz || "").split("|");
-    var url = bezpecnyOdkaz((casti[0] || "").trim());
-    if (url) {
-      odkaz.href = url;
-      odkaz.textContent = (casti[1] || "Více").trim();
-      odkaz.hidden = false;
-    } else {
-      odkaz.hidden = true;
-    }
+    var tlacitka = document.querySelector(".tlacitka");
+    Array.prototype.slice.call(tlacitka.querySelectorAll(".tlacitko--odkaz")).forEach(function (x) { x.remove(); });
+    var sdilet = document.getElementById("okno-sdilet");
+    (data.odkazy || []).forEach(function (radek) {
+      var casti = radek.split("|");
+      var url = bezpecnyOdkaz((casti[0] || "").trim());
+      if (!url) return;
+      var a = el("a", "tlacitko tlacitko--odkaz", (casti[1] || "Více").trim());
+      a.href = url; a.target = "_blank"; a.rel = "noopener";
+      tlacitka.insertBefore(a, sdilet);
+    });
 
     okno.scrollTop = 0;
     if (typeof okno.showModal === "function") okno.showModal(); else okno.setAttribute("open", "");
