@@ -267,8 +267,8 @@ main { max-width: 1080px; margin: 0 auto; padding: 36px var(--okraj) 56px; }
   92%  { transform: translate(0, -96%); }
   100% { transform: translate(0, -101%); }
 }
-/* Za roletou svítí barva zóny */
-.dvirka--otevira .dvirka__za { background: var(--magenta); border-color: var(--magenta); }
+/* Za roletou je tma a v ní se rozsvítí logo – u všech okének stejně */
+.dvirka--otevira .dvirka__za { background: var(--black); border-color: var(--line); }
 .dvirka__logo { display: none; }
 .dvirka--otevira .dvirka__logo {
   display: block;
@@ -285,8 +285,6 @@ main { max-width: 1080px; margin: 0 auto; padding: 36px var(--okraj) 56px; }
 .dvirka--otevira .dvirka__za b,
 .dvirka--otevira .dvirka__za span { visibility: hidden; }
 .dvirka--otevira.dvirka--zluta .dvirka__za { background: var(--yellow); border-color: var(--yellow); color: var(--black); }
-/* Dnešní dvířka jsou sama barevná – za nimi je proto černá, ať je roleta vidět */
-.dvirka--otevira.dvirka--dnes .dvirka__za { background: var(--black); border-color: var(--line); }
 /* Ostatní dvířka ztmavnou */
 .mrizka--fokus .dvirka:not(.dvirka--otevira) { opacity: .25; transition: opacity .4s ease; }
 .mrizka .dvirka { transition: opacity .4s ease; }
