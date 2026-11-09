@@ -9,7 +9,7 @@
   // Pevné "náhodné" pořadí okének v mřížce
   var PORADI = [7, 15, 2, 21, 11, 18, 4, 23, 9, 1, 13, 20, 16, 6, 24, 10, 3, 19, 12, 22, 5, 17, 8, 14];
   var DNY = ["NE", "PO", "ÚT", "ST", "ČT", "PÁ", "SO"];
-  // Adresa, kterou lidé sdílí (tlačítko Pošli to partě). Až bude bunkertimpo.cz/advent, přepiš ji sem.
+  // Adresa, kterou lidé sdílí (tlačítko Pošli kámošům). Až bude bunkertimpo.cz/advent, přepiš ji sem.
   var ADRESA_KALENDARE = "https://market86.github.io/bunker-advent/";
   var OSTRE_ADRESY = /(^|\.)github\.io$|(^|\.)bunkertimpo\.cz$/i;
 
@@ -317,13 +317,13 @@
       navigator.share({ title: "Advent v Bunkru", text: text, url: ADRESA_KALENDARE }).catch(function () {});
       return;
     }
-    var hotovo = function () { hlaska("Odkaz zkopírovaný. Pošli ho partě."); };
+    var hotovo = function () { hlaska("Odkaz zkopírovaný. Pošli ho kámošům."); };
     try {
       navigator.clipboard.writeText(text + " " + ADRESA_KALENDARE).then(hotovo, function () {
-        hlaska("Pošli partě odkaz: " + ADRESA_KALENDARE);
+        hlaska("Pošli kámošům odkaz: " + ADRESA_KALENDARE);
       });
     } catch (e) {
-      hlaska("Pošli partě odkaz: " + ADRESA_KALENDARE);
+      hlaska("Pošli kámošům odkaz: " + ADRESA_KALENDARE);
     }
   }
 
