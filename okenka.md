@@ -50,10 +50,12 @@ odkaz: https://www.facebook.com/bunkertimpo | Facebook
 Natočíš to? Označ nás na Instagramu (@bunker_timpo) nebo na Facebooku (Bunker Timpo) a sdílíme tě. 💪
 
 ## 5
-nadpis: Ty doneseš jen tenisky
+nadpis: Věděli jste, že voda je zdarma?
 foto: fotky/05.jpg
 
-Voda zdarma, ručník ti půjčíme, věci zamkneš do skříňky. Ty doneseš jen tenisky a chuť. 👟
+V Bunkru máme barely s pitnou vodou a natočit si můžeš, kolik chceš. Zdarma. 💧
+
+Ručník ti půjčíme a věci zamkneš do skříňky. Ty doneseš jen tenisky a chuť. 👟
 
 ## 6
 nadpis: Mikulášská nadílka
@@ -71,7 +73,7 @@ foto: fotky/07.jpg
 
 Paty dole, kolena za špičkami, záda rovně. Nejdřív technika, pak váha.
 
-Nevíš si rady? Chytni Davida. 🏋️
+Nevíš si rady? Zeptej se Davida. 🏋️
 
 ## 8
 nadpis: Holky, tohle je i vaše železo
@@ -119,13 +121,17 @@ Dneska máme otevřeno 17–20. Volné stroje, klid, žádné čekání.
 Odmakej a večer si užij s čistým svědomím. 🔥
 
 ## 13
-nadpis: Sál 90 m²
+nadpis: Co se děje v sále
 foto: fotky/13.jpg
 zona: zluta
 
-Kromě činkárny máme i sál 90 m² s vlastní šatnou. Tančí se tu a cvičí.
+Kromě činkárny máme i sál 90 m² s vlastní šatnou. Co tu můžeš zažít:
 
-Dopoledne je volný, tak jestli vedeš lekce, ozvi se nám. 💃
+- [lekce nebo kurz z rozvrhu]
+- [lekce nebo kurz z rozvrhu]
+- [lekce nebo kurz z rozvrhu]
+
+Vedeš lekce a hledáš prostor? Dopoledne je sál volný, ozvi se nám. 💃
 
 ## 14
 nadpis: Výzva: porazíš Davida?
@@ -142,15 +148,20 @@ nadpis: Venku šedivo, v Bunkru léto
 foto: fotky/15.jpg
 zona: zluta
 
-Po tréninku rovnou do solária a domů jdeš s barvou. ☀️
+Prosinec, kdy jsme všichni bledí jako stěna. 🥶 Pár minut v soláriu a vypadáš, jako bys právě přiletěl/a z Kanárů. 🏝️
+
+Po tréninku rovnou do solária, bez dalšího ježdění. ☀️
+
+Tip na dárek: permanentka na solárium. [cena]
 
 ## 16
-nadpis: Lepší ceny u Reva Sport
+nadpis: Jen dnes u Reva Sport
 foto: fotky/16.jpg
+odkaz: [odkaz na Reva Sport] | Reva Sport
 
-Máš permanentku? Pak máš i lepší ceny na doplňky u Reva Sport.
+Doplňky za lepší ceny? Jen dnes: [akce – např. sleva X % s kódem BUNKER]. 🛒
 
-[jak výhodu uplatnit]
+A s permanentkou Bunkru máš u Reva Sport lepší ceny i po zbytek roku.
 
 ## 17
 nadpis: Masér se vrací
@@ -166,6 +177,8 @@ nadpis: Výzva: přiveď parťáka
 foto: fotky/18.jpg
 
 Ve dvou se líp dřepuje i hecuje. Vezmi kámoše nebo kámošku na trénink a pošli nám společnou fotku. 📸
+
+Za odměnu: [co za to – např. parťák má dnešní trénink zdarma].
 
 ## 19
 nadpis: Ranní ptáče, nebo noční sova?
@@ -191,12 +204,17 @@ Cukroví, po kterém nemusíš do Bunkru dvakrát. 🍪
 Všechno smíchej, vytvaruj kuličky, obal je v kokosu a dej na hodinu do lednice. Hotovo.
 
 ## 21
-nadpis: Jak nás najdeš
+nadpis: Mise: najdi Bunker
 foto: fotky/21.jpg
 
-Zaparkuj u OD Timpo, jdi k bočnímu vchodu ze Stiborovy a dole hledej naše dveře hned vedle střelnice Gunsport.
+Najít nás je tvůj první trénink. 😄 Tady je tajná mapa:
 
-Kdo jednou trefí, už nezabloudí. 📍
+- zaparkuj přímo u OD Timpo
+- jdi k bočnímu vchodu ze strany Stiborovy
+- dolů po schodech
+- žluté dveře jsou střelnice Gunsport, ty naše jsou hned vedle
+
+Mise splněna? Vyfoť se u našich dveří a označ nás. 📍
 
 ## 22
 nadpis: Pořád stihneš
@@ -204,7 +222,7 @@ foto: fotky/22.jpg
 
 Dárek pořád nemáš? V klidu. 🎁 Permanentka do posilovny nebo na solárium se vejde pod každý stromeček.
 
-Do hry o [hlavní cenu] jsou všechny permanentky koupené do 31. 12.
+Do hry o [hlavní cenu] se počítají všechny permanentky koupené do 31. 12.
 
 ## 23
 nadpis: Přes svátky
