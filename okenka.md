@@ -128,12 +128,14 @@ Kromě činkárny máme i sál 90 m² s vlastní šatnou. Tančí se tu a cvič�
 Dopoledne je volný, tak jestli vedeš lekce, ozvi se nám. 💃
 
 ## 14
-nadpis: Seznam se s Davidem
+nadpis: Výzva: porazíš Davida?
 foto: fotky/14.jpg
+odkaz: https://www.instagram.com/bunker_timpo | Instagram
+odkaz: https://www.facebook.com/bunkertimpo | Facebook
 
-[pár vět o Davidovi]
+Kolik dáš dřepů za minutu? ⏱️ Náš trenér David jich dal [počet].
 
-Chceš poradit? Stačí ho chytit v Bunkru. Hledáme k němu do party další trenéry, tak kdo umí, ať se hlásí.
+Zkus ho překonat, natoč se a označ nás. Kdo Davida porazí, toho dáme do story. 🏆
 
 ## 15
 nadpis: Venku šedivo, v Bunkru léto
