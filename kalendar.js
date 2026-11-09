@@ -173,6 +173,10 @@
   var casovac;
   function hlaska(text) {
     var h = document.getElementById("hlaska");
+    // když je otevřené okénko, musí být hláška v něm, jinak by byla schovaná pod ním
+    var okno = document.getElementById("okno");
+    var cil = okno.open ? okno : document.body;
+    if (h.parentNode !== cil) cil.appendChild(h);
     h.textContent = text;
     h.classList.add("hlaska--videt");
     clearTimeout(casovac);
@@ -313,18 +317,24 @@
   function sdilej() {
     var data = okenka[aktualniOkenko] || {};
     var text = "Advent v Bunkru, okénko " + aktualniOkenko + (data.nadpis ? ": " + data.nadpis : "") + ". Mrkni taky:";
+    var zkopiruj = function () {
+      var ukazOdkaz = function () { hlaska("Pošli kámošům odkaz: " + ADRESA_KALENDARE); };
+      try {
+        navigator.clipboard.writeText(text + " " + ADRESA_KALENDARE).then(function () {
+          hlaska("Odkaz zkopírovaný. Pošli ho kámošům.");
+        }, ukazOdkaz);
+      } catch (e) { ukazOdkaz(); }
+    };
     if (navigator.share) {
-      navigator.share({ title: "Advent v Bunkru", text: text, url: ADRESA_KALENDARE }).catch(function () {});
+      try {
+        navigator.share({ title: "Advent v Bunkru", text: text, url: ADRESA_KALENDARE }).catch(function (chyba) {
+          // AbortError = člověk sdílení sám zavřel, jinak sdílení nejde a zkopírujeme odkaz
+          if (!chyba || chyba.name !== "AbortError") zkopiruj();
+        });
+      } catch (e) { zkopiruj(); }
       return;
     }
-    var hotovo = function () { hlaska("Odkaz zkopírovaný. Pošli ho kámošům."); };
-    try {
-      navigator.clipboard.writeText(text + " " + ADRESA_KALENDARE).then(hotovo, function () {
-        hlaska("Pošli kámošům odkaz: " + ADRESA_KALENDARE);
-      });
-    } catch (e) {
-      hlaska("Pošli kámošům odkaz: " + ADRESA_KALENDARE);
-    }
+    zkopiruj();
   }
 
   function otevri(cislo) {
