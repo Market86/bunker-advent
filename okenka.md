@@ -78,8 +78,12 @@ Nevíš si rady? Zeptej se Davida. 🏋️
 ## 8
 nadpis: Holky, tohle je i vaše železo
 foto: fotky/08.jpg
+odkaz: https://www.instagram.com/bunker_timpo | Instagram
+odkaz: https://www.facebook.com/bunkertimpo | Facebook
 
-Dámská šatna se zrcadlem a žehličkou na vlasy. Z tréninku rovnou do práce nebo na rande. 💅
+Dámská šatna se žehličkou na vlasy, takže z tréninku rovnou do práce nebo na rande. 💅
+
+A na zrcadle tě čeká vzkaz s logem Bunkru. Vyfoť se u něj, označ nás a sdílíme tě. 📸
 
 ## 9
 nadpis: Výzva: plank
@@ -127,11 +131,11 @@ zona: zluta
 
 Kromě činkárny máme i sál 90 m² s vlastní šatnou. Co tu můžeš zažít:
 
-- [lekce nebo kurz z rozvrhu]
-- [lekce nebo kurz z rozvrhu]
-- [lekce nebo kurz z rozvrhu]
+- bachata 💃
+- karate 🥋
+- tance
 
-Vedeš lekce a hledáš prostor? Dopoledne je sál volný, ozvi se nám. 💃
+Vedeš lekce a hledáš prostor? Dopoledne je sál volný, ozvi se nám.
 
 ## 14
 nadpis: Výzva: porazíš Davida?
