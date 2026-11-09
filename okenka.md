@@ -50,12 +50,12 @@ odkaz: https://www.facebook.com/bunkertimpo | Facebook
 Natočíš to? Označ nás na Instagramu (@bunker_timpo) nebo na Facebooku (Bunker Timpo) a sdílíme tě. 💪
 
 ## 5
-nadpis: Věděli jste, že voda je zdarma?
+nadpis: Přijď nalehko
 foto: fotky/05.jpg
 
-V Bunkru máme barely s pitnou vodou a natočit si můžeš, kolik chceš. Zdarma. 💧
+Ručník ti půjčíme, věci zamkneš do skříňky a pití máme pro všechny zdarma. 💧
 
-Ručník ti půjčíme a věci zamkneš do skříňky. Ty doneseš jen tenisky a chuť. 👟
+Stačí tenisky a chuť. 👟
 
 ## 6
 nadpis: Mikulášská nadílka
@@ -178,7 +178,7 @@ foto: fotky/18.jpg
 
 Ve dvou se líp dřepuje i hecuje. Vezmi kámoše nebo kámošku na trénink a pošli nám společnou fotku. 📸
 
-Za odměnu: [co za to – např. parťák má dnešní trénink zdarma].
+Odměna? Tvůj parťák má dneska vstup zdarma. 🎁
 
 ## 19
 nadpis: Ranní ptáče, nebo noční sova?
