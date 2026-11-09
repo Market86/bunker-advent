@@ -31,10 +31,13 @@ Venku mráz, tělo jak prkno? 🥶 Než sáhneš na činku, dej si 10 minut na k
 Tip od Davida
 
 ## 3
-nadpis: 30 let železa
+nadpis: Stroje pro děti
 foto: fotky/03.jpg
+zona: zluta
 
-Železo se tu tahá přes 30 let. Generace Neředíňáků, pořád stejné místo. Teď pod novým jménem: Bunker Timpo.
+Věděli jste, že v Bunkru chystáme stroje i pro děti? První barevné kousky už dorazily. 🧒
+
+Ať mají drobci kde makat, zatímco ty dáváš bench. 💪
 
 ## 4
 nadpis: Výzva: 24 kliků
@@ -148,12 +151,13 @@ Máš permanentku? Pak máš i lepší ceny na doplňky u Reva Sport.
 [jak výhodu uplatnit]
 
 ## 17
-nadpis: Svátky bez restartu
+nadpis: Masér se vrací
 foto: fotky/17.jpg
+zona: zluta
 
-Přes svátky nemusíš makat jako normálně. Dva kratší tréninky týdně a v lednu nezačínáš od nuly. 🙌
+Věděli jste, že se do Bunkru brzy vrací masér? Po těžkém tréninku si necháš promnout záda. 💆
 
-Tip od Davida
+Termín prozradíme brzy.
 
 ## 18
 nadpis: Výzva: přiveď parťáka
