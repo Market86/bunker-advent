@@ -18,7 +18,7 @@ Formáty: VIDEO = roleta se otevře, ale story skončí před obsahem · DETAIL 
 | 10. 12. | Dárek | VIDEO | Ponožky? Zase? |
 | 11. 12. | Prosecco | HÁDANKA | Bublinky? V Bunkru? Že by… |
 | 12. 12. | Sobota večer | DETAIL | Kde je v sobotu večer nejlíp? Nápověda: pod zemí. |
-| 13. 12. | Sál | DETAIL | Za zdí činkárny se děje něco úplně jiného. |
+| 13. 12. | Sál | HÁDANKA | Za zdí činkárny se děje něco úplně jiného. |
 | 14. 12. | Porazíš Davida? | KVÍZ | Kolik dřepů dá David za minutu? 30 / 45 / 60 |
 | 15. 12. | Solárium | DETAIL (bez nápisu megaSun) | Venku šero. Za dvířky světlo. |
 | 16. 12. | Reva Sport | HÁDANKA | Jen dnes. Zítra už ne. (jen pokud bude jednodenní akce s Reva Sport) |
