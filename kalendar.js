@@ -345,16 +345,33 @@
 
     var foto = document.getElementById("okno-foto");
     foto.textContent = "";
+    clearInterval(prolinani);
     var nahradni = el("span", "okno__foto-cislo", String(cislo));
-    if (data.foto) {
+    var cesty = (data.foto || "").split(",").map(function (x) { return x.trim(); }).filter(Boolean);
+    var obrazky = [];
+    cesty.forEach(function (cesta, i) {
       var img = document.createElement("img");
       img.alt = "";
-      img.onerror = function () { foto.textContent = ""; foto.appendChild(nahradni); };
-      img.src = data.foto;
+      if (i === 0) img.className = "aktivni";
+      img.onerror = function () {
+        img.remove();
+        obrazky = obrazky.filter(function (x) { return x !== img; });
+        if (!obrazky.length) { foto.textContent = ""; foto.appendChild(nahradni); }
+        else if (!foto.querySelector("img.aktivni")) obrazky[0].classList.add("aktivni");
+      };
+      img.src = cesta;
       foto.appendChild(img);
-    } else {
-      foto.appendChild(nahradni);
-    }
+      obrazky.push(img);
+    });
+    if (!cesty.length) foto.appendChild(nahradni);
+    // víc fotek: pomalu se prolínají
+    var poradi = 0;
+    prolinani = setInterval(function () {
+      if (obrazky.length < 2) return;
+      obrazky[poradi % obrazky.length].classList.remove("aktivni");
+      poradi++;
+      obrazky[poradi % obrazky.length].classList.add("aktivni");
+    }, 4000);
 
     document.getElementById("okno-datum").textContent =
       "OKÉNKO " + cislo + " · " + denVTydnu(cislo) + " " + cislo + ". 12.";
@@ -377,7 +394,9 @@
     if (typeof okno.showModal === "function") okno.showModal(); else okno.setAttribute("open", "");
   }
 
+  var prolinani;
   function zavri() {
+    clearInterval(prolinani);
     var okno = document.getElementById("okno");
     if (typeof okno.close === "function") okno.close(); else okno.removeAttribute("open");
   }

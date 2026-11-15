@@ -3,7 +3,7 @@
 Tady upravuješ všechny texty. Návod je v souboru README.md.
 Každé okénko začíná řádkem "## číslo". Pod ním:
 - nadpis: (povinné)
-- foto: (nepovinné, cesta k fotce ve složce fotky)
+- foto: (nepovinné, cesta k fotce ve složce fotky; víc fotek odděl čárkou a budou se prolínat)
 - odkaz: (nepovinné, adresa | text tlačítka; může jich být víc pod sebou)
 - zona: zluta (jen pro sál a solárium)
 Pak prázdný řádek a text. Odstavce odděluj prázdným řádkem, odrážky začínají "- ".
@@ -32,7 +32,7 @@ Tip od Davida
 
 ## 3
 nadpis: Stroje pro děti
-foto: fotky/03.jpg
+foto: fotky/03.jpg, fotky/03b.jpg
 zona: zluta
 
 Věděli jste, že v Bunkru chystáme stroje i pro děti? První barevné kousky už dorazily. 🧒
@@ -126,7 +126,7 @@ Odmakej a večer si užij s čistým svědomím. 🔥
 
 ## 13
 nadpis: Co se děje v sále
-foto: fotky/13.jpg
+foto: fotky/13.jpg, fotky/13b.jpg, fotky/13c.jpg
 zona: zluta
 
 Kromě činkárny máme i sál 90 m² s vlastní šatnou. Co tu můžeš zažít:

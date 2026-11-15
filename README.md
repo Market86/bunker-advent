@@ -14,7 +14,7 @@ Funguje to i z mobilu přes prohlížeč.
 
 Pravidla v okenka.md:
 - `nadpis:` nadpis okénka
-- `foto:` cesta k fotce, např. `fotky/09.jpg`
+- `foto:` cesta k fotce, např. `fotky/09.jpg`. Víc fotek odděl čárkou (`fotky/13.jpg, fotky/13b.jpg`), budou se pomalu prolínat.
 - `odkaz:` adresa a text tlačítka oddělené svislítkem, např. `https://www.instagram.com/bunker_timpo | Instagram`. Řádků s odkazem může být víc, každý udělá jedno tlačítko.
 - `zona: zluta` jen pro sál a solárium (žlutý pruh)
 - pak prázdný řádek a text; odstavce odděluj prázdným řádkem, odrážky začínají `- `
