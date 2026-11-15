@@ -25,7 +25,7 @@ Formáty: VIDEO = roleta se otevře, ale story skončí před obsahem · DETAIL 
 | 17. 12. | Masér | HÁDANKA | Někdo se do Bunkru vrací… |
 | 18. 12. | Parťák | ANKETA | S kým nejradši trénuješ? Sám / S parťákem / S partou |
 | 19. 12. | Anketa | HÁDANKA | Dneska rozhoduješ ty. |
-| 20. 12. | Kuličky | DETAIL (nebo HÁDANKA) | Pořád řešíš kalorie? Dneska máme řešení. |
+| 20. 12. | Kuličky | DETAIL (nebo HÁDANKA) | Pořád řešíš kalorie? Dneska už nemusíš. |
 | 21. 12. | Mise | VIDEO | Mise pro detektivy. |
 | 22. 12. | Pořád stihneš | HÁDANKA | Panika? Klid. Ještě to stihneš. |
 | 23. 12. | Přes svátky | ANKETA | Půjdeš mezi svátky do Bunkru? Jasně / Možná / Až po Silvestru |
