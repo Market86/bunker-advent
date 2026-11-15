@@ -149,7 +149,7 @@ Zkus ho překonat, natoč se a označ nás. Kdo Davida porazí, toho dáme do st
 
 ## 15
 nadpis: Venku šedivo, v Bunkru léto
-foto: fotky/15.jpg
+foto: fotky/15.jpg, fotky/15b.jpg
 zona: zluta
 
 Prosinec, kdy jsme všichni bledí jako stěna. 🥶 Pár minut v soláriu a vypadáš, jako bys právě přiletěl/a z Kanárů. 🏝️
