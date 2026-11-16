@@ -138,14 +138,14 @@ Kromě činkárny máme i sál 90 m² s vlastní šatnou. Co tu můžeš zažít
 Vedeš lekce a hledáš prostor? Dopoledne je sál volný, ozvi se nám.
 
 ## 14
-nadpis: Výzva: porazíš Davida?
+nadpis: Hádej Davidův rekord
 foto: fotky/14.jpg
-odkaz: https://www.instagram.com/bunker_timpo | Instagram
-odkaz: https://www.facebook.com/bunkertimpo | Facebook
 
-Kolik dáš dřepů za minutu? ⏱️ Náš trenér David jich dal [počet].
+Kolik zvedl náš trenér David na [cvik, např. benchi]? Ve story jste tipovali… 🤔
 
-Zkus ho překonat, natoč se a označ nás. Kdo Davida porazí, toho dáme do story. 🏆
+Správná odpověď: [počet] kg! 🏋️
+
+Chceš se jednou dostat taky tak daleko? Zeptej se Davida, jak na to.
 
 ## 15
 nadpis: Venku šedivo, v Bunkru léto
