@@ -10,7 +10,7 @@ Kvízy a ankety: nálepku Kvíz/Anketa přidáš v Instagramu pod nápis TIPNI S
 | 3. 12. | Obří číslo | Tohle tu ještě nebylo. Poznáš, co to je? |
 | 4. 12. | Morseovka (KLIKY) | Chceš se zahřát? |
 | 5. 12. | Kvíz | Co si vzít do Bunkru? Celou tašku / Tenisky / Nic |
-| 6. 12. | Dveře Z → O | Hodní, nebo zlobiví? Dneska se to ukáže. |
+| 6. 12. | Páka Z → O | Hodní, nebo zlobiví? Dneska se to ukáže. |
 | 7. 12. | Radar | Na tohle se ptá každý nováček. |
 | 8. 12. | Přísně tajné | Dnešní okénko je pro holky. Kluci, nečtěte. |
 | 9. 12. | Anketa | Kdo vydrží déle? David / Ondra |
@@ -28,4 +28,4 @@ Kvízy a ankety: nálepku Kvíz/Anketa přidáš v Instagramu pod nápis TIPNI S
 | 21. 12. | Radar | Mise pro detektivy. |
 | 22. 12. | Trezor 2212 | Panika? Klid. Ještě to stihneš. |
 | 23. 12. | Anketa | Půjdeš mezi svátky do Bunkru? Jasně / Možná / Až po Silvestru |
-| 24. 12. | Dveře Z → O | Poslední dvířka. Otevři je. |
+| 24. 12. | Páka Z → O | Poslední dvířka. Otevři je. |
