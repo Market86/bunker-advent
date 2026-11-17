@@ -141,7 +141,7 @@ Vedeš lekce a hledáš prostor? Dopoledne je sál volný, ozvi se nám.
 nadpis: Hádej Davidův rekord
 foto: fotky/14.jpg
 
-Kolik zvedl náš trenér David na [cvik, např. benchi]? Ve story jste tipovali… 🤔
+Kolik zvedl náš trenér David na benchi? Ve story jste tipovali… 🤔
 
 Správná odpověď: [počet] kg! 🏋️
 
