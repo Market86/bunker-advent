@@ -11,7 +11,7 @@ Kvízy a ankety: nálepku Kvíz/Anketa přidáš v Instagramu pod nápis TIPNI S
 | 4. 12. | Morseovka (KLIKY) | Chceš se zahřát? |
 | 5. 12. | Kvíz | Co si vzít do Bunkru? Celou tašku / Tenisky / Nic |
 | 6. 12. | Páka Z → O | Hodní, nebo zlobiví? Dneska se to ukáže. |
-| 7. 12. | Radar | Nováčku? Máme tě na radaru. |
+| 7. 12. | Radar | Jste tady noví? Máme vás na radaru. |
 | 8. 12. | Přísně tajné | Dnešní okénko je pro holky. Kluci, nečtěte. |
 | 9. 12. | Anketa | Kdo vydrží déle? David / Ondra |
 | 10. 12. | Trezor 1012 | Ponožky? Zase? |
