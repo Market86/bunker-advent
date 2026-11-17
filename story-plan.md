@@ -5,7 +5,7 @@ Kvízy a ankety: nálepku Kvíz/Anketa přidáš v Instagramu pod nápis TIPNI S
 
 | Den | Formát | Text story |
 |---|---|---|
-| 1. 12. | Roleta | Dvířka se otevírají. Jsi připravený? |
+| 1. 12. | Roleta | Dvířka se otevírají. Jste připravení? |
 | 2. 12. | Přísně tajné | Než sáhneš na činku, mrkni sem. |
 | 3. 12. | Obří číslo | Tohle tu ještě nebylo. Poznáš, co to je? |
 | 4. 12. | Morseovka (KLIKY) | Chceš se zahřát? |
