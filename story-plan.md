@@ -7,7 +7,7 @@ Ankety: hlasovací pult s tlačítky A/B/C, nálepku Anketa přidáš pod nápis
 |---|---|---|
 | 1. 12. | Roleta | Dvířka se otevírají. Jste připravení? |
 | 2. 12. | Přísně tajné | Studený start? To bolí. |
-| 3. 12. | Graffiti číslo | Tohle tu ještě nebylo. Poznáš, co to je? |
+| 3. 12. | Sprej přes šablonu | Tohle tu ještě nebylo. Poznáš, co to je? |
 | 4. 12. | Morseovka (KLIKY) | Chceš se zahřát? |
 | 5. 12. | Anketa (pult) | Co si vzít do Bunkru? Celou tašku / Tenisky / Nic |
 | 6. 12. | Páka Z → O | Hodní, nebo zlobiví? Dneska se to ukáže. |
@@ -15,15 +15,15 @@ Ankety: hlasovací pult s tlačítky A/B/C, nálepku Anketa přidáš pod nápis
 | 8. 12. | Přísně tajné | Dnešní okénko je pro holky. Kluci, nečtěte. |
 | 9. 12. | Anketa (pult) | Kdo vydrží déle? David / Ondra |
 | 10. 12. | Trezor 10.12 | Ponožky? Zase? |
-| 11. 12. | Graffiti číslo | Bublinky? V Bunkru? Že by… |
+| 11. 12. | Sprej přes šablonu | Bublinky? V Bunkru? Že by… |
 | 12. 12. | Morseovka (SOBOTA) | Kde je v sobotu večer nejlíp? Nápověda: pod zemí. |
 | 13. 12. | Přísně tajné | Za zdí činkárny se děje něco úplně jiného. |
 | 14. 12. | Anketa (pult) | Kolik zvedl David na benchi? 3 možnosti |
-| 15. 12. | Graffiti číslo | Venku šero. Za dvířky světlo. |
+| 15. 12. | Sprej přes šablonu | Venku šero. Za dvířky světlo. |
 | 16. 12. | Trezor 16.12 | Jen dnes. Zítra už ne. (jen s akcí Reva Sport) |
 | 17. 12. | Morseovka (MASER) | Někdo se do Bunkru vrací… |
 | 18. 12. | Anketa (pult) | S kým nejradši trénuješ? Sám / S parťákem / S partou |
-| 19. 12. | Graffiti číslo | Ranní ptáče, nebo noční sova? |
+| 19. 12. | Sprej přes šablonu | Ranní ptáče, nebo noční sova? |
 | 20. 12. | Přísně tajné | Pořád řešíš kalorie? Dneska už nemusíš. |
 | 21. 12. | Radar | Mise pro detektivy. |
 | 22. 12. | Trezor 22.12 | Panika? Klid. Ještě to stihneš. |
