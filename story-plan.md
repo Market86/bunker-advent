@@ -22,7 +22,7 @@ Ankety: hlasovací pult s tlačítky A/B/C, nálepku Anketa přidáš pod nápis
 | 15. 12. | Sprej přes šablonu | Venku šero. Za dvířky světlo. |
 | 16. 12. | Trezor 16.12 | Jen dnes. Zítra už ne. (jen s akcí Reva Sport) |
 | 17. 12. | Morseovka (MASER) | Někdo se do Bunkru vrací… |
-| 18. 12. | Anketa (pult) | S kým nejradši trénuješ? Sám / S parťákem / S partou |
+| 18. 12. | Anketa (pult) | S kým nejradši trénuješ? Sólo / S parťákem / S partou |
 | 19. 12. | Sprej přes šablonu | Ranní ptáče, nebo noční sova? |
 | 20. 12. | Přísně tajné | Pořád řešíš kalorie? Dneska už nemusíš. |
 | 21. 12. | Radar | Mise pro detektivy. |
