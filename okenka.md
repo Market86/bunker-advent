@@ -147,7 +147,7 @@ Chceš se jednou dostat taky tak daleko? Zeptej se Davida, jak na to.
 
 ## 15
 nadpis: Venku šedivo, v Bunkru léto
-foto: fotky/15.jpg, fotky/15b.jpg
+foto: fotky/15.jpg
 zona: zluta
 
 Prosinec, kdy jsme všichni bledí jako stěna. 🥶 Pár minut v soláriu a vypadáš jako po týdnu na Kanárech. 🏝️
