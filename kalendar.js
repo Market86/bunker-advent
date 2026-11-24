@@ -350,8 +350,10 @@
     var cesty = (data.foto || "").split(",").map(function (x) { return x.trim(); }).filter(Boolean);
     var obrazky = [];
     cesty.forEach(function (cesta, i) {
-      var img = document.createElement("img");
-      img.alt = "";
+      var jeVideo = /\.(mp4|webm|mov)$/i.test(cesta);
+      var img = document.createElement(jeVideo ? "video" : "img");
+      if (jeVideo) { img.muted = true; img.loop = true; img.autoplay = true; img.playsInline = true; img.setAttribute("playsinline", ""); }
+      else img.alt = "";
       if (i === 0) img.className = "aktivni";
       img.onerror = function () {
         img.remove();

@@ -12,7 +12,7 @@ Hranaté závorky [takhle] znamenají, že je potřeba doplnit údaj.
 ## úvod
 nadpis: Advent v Bunkru
 
-24 okének, každý den jedno. Tipy, výzvy, recept a pár dárků. Kdo si v prosinci koupí permanentku, hraje o [hlavní cenu].
+24 okének, každý den jedno. Tipy, výzvy, recept a pár dárků, ať se na Vánoce čeká líp.
 
 ## 1
 nadpis: Advent v Bunkru je tady
@@ -20,7 +20,7 @@ foto: fotky/01.jpg
 
 Celý prosinec tu každý den otevřeš nové okénko. Tipy od Davida, výzvy, recept i pár dárků. 🎄
 
-A hlavně: každá permanentka koupená v prosinci je los o [hlavní cenu]. 🎁 Losujeme po svátcích.
+Ať se ti čekání na Vánoce v Bunkru dobře krátí. 💪
 
 ## 2
 nadpis: Zahřej se, než zvedneš
@@ -103,8 +103,6 @@ foto: fotky/10.jpg
 Ponožky už dostal/a minulý rok. 🧦 Daruj permanentku do posilovny nebo na solárium.
 
 [cena, kde koupit]
-
-A každá prosincová permanentka je los o [hlavní cenu]. 🎁
 
 ## 11
 nadpis: Na zdraví i na svaly
@@ -226,7 +224,7 @@ foto: fotky/22.jpg
 
 Dárek pořád nemáš? V klidu. 🎁 Permanentka do posilovny nebo na solárium se vejde pod každý stromeček.
 
-Do hry o [hlavní cenu] se počítají všechny permanentky koupené do 31. 12.
+Stav se pro ni na recepci.
 
 ## 23
 nadpis: Přes svátky
@@ -242,6 +240,6 @@ foto: fotky/24.jpg
 
 Štědrý den! Díky, že jste s námi v prvním roce Bunkru.
 
-Výherce [hlavní ceny] vylosujeme a vyhlásíme po svátcích, [datum]. Nový rok, nová forma. 💪
+V novém roce na viděnou v Bunkru. Nový rok, nová forma. 💪
 
 Krásné svátky! 🎄✨

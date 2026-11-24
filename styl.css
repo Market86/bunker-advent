@@ -331,6 +331,7 @@ main { max-width: 1080px; margin: 0 auto; padding: 36px var(--okraj) 56px; }
 .okno[open] .okno__pruh span { animation: vtahni 1.5s cubic-bezier(.65, 0, .25, 1) both; }
 /* Fotka se pomalu prosvětlí z tmy, zároveň s pruhem */
 .okno[open] .okno__foto img:first-child,
+.okno[open] .okno__foto video:first-child,
 .okno[open] .okno__foto-cislo { animation: prosvetli 2.2s cubic-bezier(.3, 0, .2, 1) .15s backwards; }
 @keyframes prosvetli {
   0%   { opacity: 0; filter: brightness(.15); transform: scale(1.12); }
@@ -359,12 +360,12 @@ main { max-width: 1080px; margin: 0 auto; padding: 36px var(--okraj) 56px; }
   overflow: hidden;
 }
 .okno__foto { position: relative; }
-.okno__foto img {
+.okno__foto img, .okno__foto video {
   position: absolute; inset: 0;
   width: 100%; height: 100%; object-fit: cover; display: block;
   opacity: 0; transition: opacity 1.4s ease;
 }
-.okno__foto img.aktivni { opacity: 1; }
+.okno__foto img.aktivni, .okno__foto video.aktivni { opacity: 1; }
 .okno__foto-cislo { font: 400 clamp(120px, 40vw, 220px)/1 var(--font-stencil); color: var(--line); }
 .okno__obsah { padding: 22px var(--okraj) calc(var(--okraj) + 16px); display: grid; gap: 14px; }
 .okno[open] .okno__obsah > * { animation: naskoc .5s var(--pohyb) .8s both; }
