@@ -55,7 +55,7 @@ foto: fotky/05.jpg
 
 Ručník ti půjčíme, věci zamkneš do skříňky a pití máme pro všechny zdarma. 💧
 
-Stačí tenisky a chuť. 👟
+Stačí tenisky a chuť. 👟 A máš MultiSport? Platí i u nás.
 
 ## 6
 nadpis: Mikulášská nadílka
