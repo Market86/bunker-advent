@@ -100,9 +100,7 @@ Dáš víc? ⏱️ Napiš nám svůj čas do zpráv. Nejlepší ukážeme ve sto
 nadpis: Dárek pod stromeček
 foto: fotky/10.jpg
 
-Zase ponožky? 🧦 Letos daruj permanentku do posilovny nebo na solárium.
-
-[cena, kde koupit]
+Zase ponožky? 🧦 Letos daruj dárkový poukaz do Bunkru. Hodnotu si vybereš a poukaz v obálce koupíš na recepci.
 
 ## 11
 nadpis: Na zdraví i na svaly
@@ -110,7 +108,7 @@ foto: fotky/11.jpg
 
 Věděli jste, že na bar chystáme proteinové nealko prosecco? 🥂 Bublinky, sváteční nálada a k tomu bílkoviny.
 
-[od kdy bude k dostání]
+Na baru ho najdeš od 21. 12.
 
 Přiťukneme si v Bunkru!
 

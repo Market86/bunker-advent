@@ -16,8 +16,8 @@ Legenda: ✅ hotovo · ⏳ chybí údaj · 📷 chybí fotka (nepovinné, bez n�
 | 7 | Dřep krok za krokem | Radar | ✅ |
 | 8 | Holky, tohle je i vaše železo (šatna, polep na zrcadle) | Přísně tajné | ⏳ bude šatna do 8. 12. hotová? · 📷 |
 | 9 | Výzva: plank | Anketa | ⏳ časy Davida a Ondry · 📷 |
-| 10 | Dárek pod stromeček (permanentka) | Trezor | ⏳ cena a kde koupit · 📷 |
-| 11 | Proteinové nealko prosecco | Obří číslo | ⏳ od kdy bude · 📷 |
+| 10 | Dárek pod stromeček (dárkový poukaz) | Trezor | 📷 |
+| 11 | Proteinové nealko prosecco (od 21. 12.) | Obří číslo | 📷 |
 | 12 | Sobota večer | Morseovka | ✅ |
 | 13 | Co se děje v sále (bachata, karate, tance) | Přísně tajné | ✅ |
 | 14 | Hádej Davidův rekord (bench) | Anketa | ⏳ kg + 2 špatné možnosti do ankety · 📷 |
