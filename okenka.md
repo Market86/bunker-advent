@@ -232,7 +232,16 @@ foto: fotky/23.jpg
 
 Kdo dneska dorazí na trénink, dostane od nás dárek pod stromeček: [dárek]. 🎁
 
-Ať se cukroví lépe vejde. 😉 Vánoční otevírací dobu najdeš v našem příspěvku.
+Ať se cukroví lépe vejde. 😉
+
+Přes svátky máme otevřeno takhle:
+
+- 24. 12. 9–12
+- 25. a 26. 12. zavřeno
+- 27.–30. 12. normálně
+- 31. 12. 9–18
+- 1. 1. zavřeno
+- od 2. 1. zase normálně
 
 ## 24
 nadpis: Je to tady

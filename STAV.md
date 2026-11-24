@@ -29,7 +29,7 @@ Legenda: ✅ hotovo · ⏳ chybí údaj · 📷 chybí fotka (nepovinné, bez n�
 | 20 | Proteinové kuličky (recept) | Přísně tajné | 📷 |
 | 21 | Mise: najdi Bunker | Radar | 📷 vchod a dveře |
 | 22 | Pořád stihneš (permanentka) | Trezor | 📷 |
-| 23 | Přes svátky | Anketa | ⏳ otevírací doba 24.–31. 12. · 📷 |
+| 23 | Poslední trénink před Vánoci + otevírací doba | Anketa | ⏳ jaký dárek · 📷 |
 | 24 | Finále, poděkování a přání | Páka Z → O | 📷 |
 
 ## Před spuštěním
