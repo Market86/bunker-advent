@@ -61,7 +61,7 @@ Stačí tenisky a chuť. 👟
 nadpis: Mikulášská nadílka
 foto: fotky/06.jpg
 
-Byli jste letos hodní? 🎅 Kdo dneska přijde na trénink, dostane od nás nadílku: [co].
+Byli jste letos hodní? 🎅 Kdo dneska přijde na trénink, dostane od nás na baru protein zdarma.
 
 Hříšníci, co tu dlouho nebyli, dostanou taky. Ale čert si je zapíše. 😈
 
