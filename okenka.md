@@ -227,12 +227,12 @@ Dárek pořád nemáš? V klidu. 🎁 Permanentka do posilovny nebo na solárium
 Stav se pro ni na recepci.
 
 ## 23
-nadpis: Přes svátky
+nadpis: Poslední trénink před Vánoci
 foto: fotky/23.jpg
 
-Kdy máme otevřeno: [doplnit 24.–31. 12.]
+Kdo dneska dorazí na trénink, dostane od nás dárek pod stromeček: [dárek]. 🎁
 
-Mezi svátky klidně přijď vytrávit. 🍗
+Ať se cukroví lépe vejde. 😉 Vánoční otevírací dobu najdeš v našem příspěvku.
 
 ## 24
 nadpis: Je to tady

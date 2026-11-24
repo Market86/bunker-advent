@@ -27,5 +27,5 @@ Ankety: hlasovací pult s tlačítky A/B/C, nálepku Anketa přidáš pod nápis
 | 20. 12. | Přísně tajné | Pořád řešíš kalorie? Dneska už nemusíš. |
 | 21. 12. | Radar | Mise pro detektivy. |
 | 22. 12. | Trezor 22.12 | Panika? Klid. Ještě to stihneš. |
-| 23. 12. | Anketa (pult) | Půjdeš mezi svátky do Bunkru? Jasně / Možná / Až po Silvestru |
+| 23. 12. | Anketa (pult) | Dáš ještě trénink před Vánoci? Jasně / Možná / Až po svátcích |
 | 24. 12. | Páka Z → O | Poslední dvířka. Otevři je. |
