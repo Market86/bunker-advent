@@ -61,7 +61,7 @@ Stačí tenisky a chuť. 👟
 nadpis: Mikulášská nadílka
 foto: fotky/06.jpg
 
-Byl/a jsi letos hodný/á? 🎅 Kdo dneska přijde na trénink, dostane od nás nadílku: [co].
+Byli jste letos hodní? 🎅 Kdo dneska přijde na trénink, dostane od nás nadílku: [co].
 
 Hříšníci, co tu dlouho nebyli, dostanou taky. Ale čert si je zapíše. 😈
 
@@ -100,7 +100,7 @@ Dáš víc? ⏱️ Napiš nám svůj čas do zpráv. Nejlepší ukážeme ve sto
 nadpis: Dárek pod stromeček
 foto: fotky/10.jpg
 
-Ponožky už dostal/a minulý rok. 🧦 Daruj permanentku do posilovny nebo na solárium.
+Zase ponožky? 🧦 Letos daruj permanentku do posilovny nebo na solárium.
 
 [cena, kde koupit]
 
@@ -150,7 +150,7 @@ nadpis: Venku šedivo, v Bunkru léto
 foto: fotky/15.jpg, fotky/15b.jpg
 zona: zluta
 
-Prosinec, kdy jsme všichni bledí jako stěna. 🥶 Pár minut v soláriu a vypadáš, jako bys právě přiletěl/a z Kanárů. 🏝️
+Prosinec, kdy jsme všichni bledí jako stěna. 🥶 Pár minut v soláriu a vypadáš jako po týdnu na Kanárech. 🏝️
 
 Po tréninku rovnou do solária, bez dalšího ježdění. ☀️
 
