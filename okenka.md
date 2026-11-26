@@ -87,7 +87,7 @@ A na zrcadle tě čeká vzkaz s logem Bunkru. Vyfoť se u něj, označ nás a sd
 
 ## 9
 nadpis: Výzva: plank
-foto: fotky/09.jpg
+foto: fotky/09.mp4
 
 Lokty pod ramena, tělo rovně a drž. Kluci z Bunkru to zkusili za tebe:
 
