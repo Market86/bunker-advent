@@ -100,15 +100,15 @@ Dáš víc? ⏱️ Napiš nám svůj čas do zpráv. Nejlepší ukážeme ve sto
 nadpis: Dárek pod stromeček
 foto: fotky/10.jpg
 
-Zase ponožky? 🧦 Letos daruj dárkový poukaz do Bunkru. Hodnotu si vybereš a poukaz v obálce koupíš na recepci.
+Zase ponožky? 🧦 Letos daruj dárkový poukaz do Bunkru v hodnotě od 500 do 10 000 Kč, nebo rovnou permanentku.
+
+Koupíš je na recepci.
 
 ## 11
 nadpis: Na zdraví i na svaly
 foto: fotky/11.jpg
 
-Věděli jste, že na bar chystáme proteinové nealko prosecco? 🥂 Bublinky, sváteční nálada a k tomu bílkoviny.
-
-Na baru ho najdeš od 21. 12.
+Věděli jste, že na baru máme proteinové nealko prosecco? 🥂 Bublinky, sváteční nálada a k tomu bílkoviny.
 
 Přiťukneme si v Bunkru!
 
@@ -137,9 +137,9 @@ Vedeš lekce a hledáš prostor? Dopoledne je sál volný, ozvi se nám.
 nadpis: Hádej Davidův rekord
 foto: fotky/14.jpg
 
-Kolik zvedl náš trenér David na benchi? Ve story jste tipovali… 🤔
+Kolik zvedne náš trenér David na tlaku na ramena na stroji? Ve story jste tipovali… 🤔
 
-Správná odpověď: [počet] kg! 🏋️
+Správná odpověď: 120 kg, a to 20× v plném rozsahu! 🏋️
 
 Chceš se jednou dostat taky tak daleko? Zeptej se Davida, jak na to.
 
@@ -164,13 +164,13 @@ Doplňky za lepší ceny? Jen dnes: [akce – např. sleva X % s kódem BUNKER].
 A s permanentkou Bunkru máš u Reva Sport lepší ceny i po zbytek roku.
 
 ## 17
-nadpis: Masér se vrací
+nadpis: Masér je zpátky
 foto: fotky/17.jpg
 zona: zluta
 
-Věděli jste, že se do Bunkru brzy vrací masér? Po těžkém tréninku si necháš promnout záda. 💆
+Věděli jste, že v Bunkru máme zase maséra? 💆 Po těžkém tréninku si necháš promnout záda.
 
-Termín prozradíme brzy.
+Na termín se zeptej na recepci.
 
 ## 18
 nadpis: Výzva: přiveď parťáka
@@ -220,9 +220,9 @@ Mise splněna? Vyfoť se u našich dveří a označ nás. 📍
 nadpis: Pořád stihneš
 foto: fotky/22.jpg
 
-Dárek pořád nemáš? V klidu. 🎁 Permanentka do posilovny nebo na solárium se vejde pod každý stromeček.
+Dárek pořád nemáš? V klidu. 🎁 Dárkový poukaz do Bunkru nebo permanentka se vejde pod každý stromeček.
 
-Stav se pro ni na recepci.
+Stav se pro ně na recepci.
 
 ## 23
 nadpis: Poslední trénink před Vánoci

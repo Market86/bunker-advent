@@ -18,10 +18,10 @@ Ankety: hlasovací pult s tlačítky A/B/C, nálepku Anketa přidáš pod nápis
 | 11. 12. | Sprej přes šablonu | Bublinky? V Bunkru? Že by… |
 | 12. 12. | Morseovka (SOBOTA) | Kde je v sobotu večer nejlíp? Nápověda: pod zemí. |
 | 13. 12. | Přísně tajné | Za zdí činkárny se děje něco úplně jiného. |
-| 14. 12. | Anketa (pult) | Kolik zvedl David na benchi? 3 možnosti |
+| 14. 12. | Anketa (pult) | Kolik zvedne David na ramena (stroj)? 80 / 100 / 120 kg (správně 120 kg, 20×) |
 | 15. 12. | Sprej přes šablonu | Venku šero. Za dvířky světlo. |
 | 16. 12. | Trezor 16.12 | Jen dnes. Zítra už ne. (jen s akcí Reva Sport) |
-| 17. 12. | Morseovka (MASER) | Někdo se do Bunkru vrací… |
+| 17. 12. | Morseovka (MASER) | Někdo je zpátky v Bunkru… |
 | 18. 12. | Anketa (pult) | S kým nejradši trénuješ? Sólo / S parťákem / S partou |
 | 19. 12. | Sprej přes šablonu | Ranní ptáče, nebo noční sova? |
 | 20. 12. | Přísně tajné | Pořád řešíš kalorie? Dneska už nemusíš. |
