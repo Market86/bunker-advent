@@ -228,8 +228,8 @@
 
   // ---------- zvuk (vyrobený přímo v prohlížeči, žádný soubor) ----------
   var KLIC_ZVUK = "bunker-advent-zvuk";
-  var zvukZap = false;
-  try { zvukZap = localStorage.getItem(KLIC_ZVUK) === "1"; } catch (e) { /* nevadí */ }
+  var zvukZap = true;
+  try { zvukZap = localStorage.getItem(KLIC_ZVUK) !== "0"; } catch (e) { /* nevadí */ }
   var ac = null;
   function audio() {
     if (!ac) {
