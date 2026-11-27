@@ -216,14 +216,14 @@
       void document.body.offsetWidth;
       document.body.classList.add("otres");
       vibruj([60]);
-    }, 1670);
+    }, 970);
     setTimeout(function () {
       b.classList.remove("dvirka--otevira", "dvirka--dnes");
       b.classList.add("dvirka--otevreno");
       mrizka.classList.remove("mrizka--fokus");
       vykresliPostup();
       otevri(cislo);
-    }, 2750);
+    }, 1500);
   }
 
   // ---------- zvuk (vyrobený přímo v prohlížeči, žádný soubor) ----------
@@ -269,10 +269,10 @@
     if (!zvukZap) return;
     var ctx = audio(); if (!ctx) return;
     var t = ctx.currentTime + 0.02;
-    for (var i = 0; i < 8; i++) sum(ctx, t + i * 0.045, 0.03, 2200 + Math.random() * 900, 0.35, 4);   // zarachocení
-    bouchnuti(ctx, t + 0.69, 0.5);                                                                    // spadne zpátky
-    for (var j = 0; j < 22; j++) sum(ctx, t + 1.06 + j * 0.028, 0.025, 1300 + j * 40, 0.22, 5);        // roleta jede nahoru
-    bouchnuti(ctx, t + 1.67, 1);                                                                      // náraz nahoře
+    for (var i = 0; i < 8; i++) sum(ctx, t + i * 0.026, 0.03, 2200 + Math.random() * 900, 0.35, 4);   // zarachocení
+    bouchnuti(ctx, t + 0.40, 0.5);                                                                    // spadne zpátky
+    for (var j = 0; j < 22; j++) sum(ctx, t + 0.61 + j * 0.016, 0.025, 1300 + j * 40, 0.22, 5);        // roleta jede nahoru
+    bouchnuti(ctx, t + 0.97, 1);                                                                      // náraz nahoře
   }
   function zvukZamceno() {
     if (!zvukZap) return;

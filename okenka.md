@@ -16,7 +16,7 @@ nadpis: Advent v Bunkru
 
 ## 1
 nadpis: Advent v Bunkru je tady
-foto: fotky/01.jpg
+foto: fotky/01.mp4
 
 Celý prosinec tu každý den otevřeš nové okénko. Tipy od Davida, výzvy, recept i pár dárků. 🎄
 
